@@ -13,27 +13,27 @@ describe('components/form-elements/text-input/TextInput', () => {
     });
 
     test('should correctly render default component', () => {
-        const wrapper = shallow(<TextInput label="label" name="input" />);
+        const wrapper = shallow(<TextInput label="bdl-Label" name="input" />);
 
         expect(wrapper.find('TextInput').length).toEqual(1);
     });
 
     test('should mark required fields invalid when empty', () => {
-        const wrapper = mount(<TextInput className="coverage" isRequired label="label" name="input" />);
+        const wrapper = mount(<TextInput className="coverage" isRequired label="bdl-Label" name="input" />);
         const input = wrapper.find('input');
         input.simulate('blur');
         expect(wrapper.find('.text-input-container').hasClass('show-error')).toBeTruthy();
     });
 
     test('should mark required fields valid when not empty', () => {
-        const wrapper = mount(<TextInput isRequired label="label" name="input" value="baba" />);
+        const wrapper = mount(<TextInput isRequired label="bdl-Label" name="input" value="baba" />);
         const input = wrapper.find('input');
         input.simulate('blur');
         expect(wrapper.find('.text-input-container').hasClass('show-error')).toBeFalsy();
     });
 
     test('should correctly validate when change event is fired', () => {
-        const wrapper = mount(<TextInput isRequired label="label" name="input" value="" />);
+        const wrapper = mount(<TextInput isRequired label="bdl-Label" name="input" value="" />);
         const input = wrapper.find('input');
         input.simulate('blur');
 
@@ -51,21 +51,21 @@ describe('components/form-elements/text-input/TextInput', () => {
     });
 
     test('should mark email fields invalid when invalid', () => {
-        const wrapper = mount(<TextInput label="label" name="input" type="email" value="bob" />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" type="email" value="bob" />);
         const input = wrapper.find('input');
         input.simulate('blur');
         expect(wrapper.state('isValid')).toBeFalsy();
     });
 
     test('should mark email fields valid when valid', () => {
-        const wrapper = mount(<TextInput label="label" name="input" type="email" value="bob@bob.com" />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" type="email" value="bob@bob.com" />);
         const input = wrapper.find('input');
         input.simulate('blur');
         expect(wrapper.find('.text-input-container').hasClass('show-error')).toBeFalsy();
     });
 
     test('should mark url fields invalid when invalid', () => {
-        const wrapper = mount(<TextInput label="label" name="input" type="url" value="bob" />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" type="url" value="bob" />);
         const instance = wrapper.instance();
         instance.input = { validity: { typeMismatch: true } };
         instance.checkValidity();
@@ -75,7 +75,7 @@ describe('components/form-elements/text-input/TextInput', () => {
     });
 
     test('should mark url fields valid when valid', () => {
-        const wrapper = mount(<TextInput label="label" name="input" type="url" value="http://bob.com" />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" type="url" value="http://bob.com" />);
         const instance = wrapper.instance();
         instance.input = { validity: { valid: true } };
         instance.checkValidity();
@@ -88,7 +88,7 @@ describe('components/form-elements/text-input/TextInput', () => {
     test('should set an input as valid when the validityFn returns an void', () => {
         function validityFn() {}
 
-        const wrapper = mount(<TextInput label="label" name="input" type="custom" validation={validityFn} />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" type="custom" validation={validityFn} />);
         const input = wrapper.find('input');
         input.simulate('blur');
 
@@ -104,7 +104,7 @@ describe('components/form-elements/text-input/TextInput', () => {
         }
 
         const wrapper = mount(
-            <TextInput label="label" name="input" type="custom" validation={validityFn} value="yes" />,
+            <TextInput label="bdl-Label" name="input" type="custom" validation={validityFn} value="yes" />,
         );
         const input = wrapper.find('input');
         const setCustomValiditySpy = jest.spyOn(input.getDOMNode(), 'setCustomValidity');
@@ -123,7 +123,7 @@ describe('components/form-elements/text-input/TextInput', () => {
 
         stub.onCall(1).returns();
 
-        const wrapper = mount(<TextInput label="label" name="input" type="custom" validation={stub} value="yes" />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" type="custom" validation={stub} value="yes" />);
         let input = wrapper.find('input');
         let setCustomValiditySpy = jest.spyOn(input.getDOMNode(), 'setCustomValidity');
 
@@ -146,7 +146,7 @@ describe('components/form-elements/text-input/TextInput', () => {
             };
         }
 
-        const wrapper = mount(<TextInput label="label" name="input" type="custom" validation={validityFn} />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" type="custom" validation={validityFn} />);
         const input = wrapper.find('input');
         input.simulate('blur');
 
@@ -162,7 +162,7 @@ describe('components/form-elements/text-input/TextInput', () => {
         }
 
         const wrapper = mount(
-            <TextInput isRequired label="label" name="input" type="custom" validation={validityFn} />,
+            <TextInput isRequired label="bdl-Label" name="input" type="custom" validation={validityFn} />,
         );
         const input = wrapper.find('input');
         const setCustomValiditySpy = jest.spyOn(input.getDOMNode(), 'setCustomValidity');
@@ -172,7 +172,7 @@ describe('components/form-elements/text-input/TextInput', () => {
     });
 
     test('should re-validate when input is set via props programaticallly', () => {
-        const wrapper = mount(<TextInput isRequired label="label" name="input" value="" />);
+        const wrapper = mount(<TextInput isRequired label="bdl-Label" name="input" value="" />);
         const input = wrapper.find('input');
         input.simulate('blur');
 
@@ -192,7 +192,7 @@ describe('components/form-elements/text-input/TextInput', () => {
     });
 
     test('should validate onChange when input is already in error state', () => {
-        const wrapper = mount(<TextInput isRequired label="label" name="input" value="" />);
+        const wrapper = mount(<TextInput isRequired label="bdl-Label" name="input" value="" />);
         const input = wrapper.find('input');
         input.simulate('blur');
 
@@ -224,7 +224,7 @@ describe('components/form-elements/text-input/TextInput', () => {
             errorMessage: 'Error Message',
         };
 
-        const component = mount(<TextInput label="label" name="input" value="" />, { context, childContextTypes });
+        const component = mount(<TextInput label="bdl-Label" name="input" value="" />, { context, childContextTypes });
 
         validityStateHandlerSpy.callArgWith(1, error);
 
@@ -247,7 +247,7 @@ describe('components/form-elements/text-input/TextInput', () => {
             badInput: true,
         };
 
-        const component = mount(<TextInput label="label" name="input" value="" />, { context, childContextTypes });
+        const component = mount(<TextInput label="bdl-Label" name="input" value="" />, { context, childContextTypes });
 
         validityStateHandlerSpy.callArgWith(1, error);
         expect(component.state('error').code).toEqual('badInput');
@@ -273,7 +273,7 @@ describe('components/form-elements/text-input/TextInput', () => {
             patternMismatch: true,
         };
 
-        const component = mount(<TextInput label="label" name="input" value="" />, { context, childContextTypes });
+        const component = mount(<TextInput label="bdl-Label" name="input" value="" />, { context, childContextTypes });
 
         validityStateHandlerSpy.callArgWith(1, error);
         expect(component.state('error').code).toEqual('patternMismatch');
@@ -295,7 +295,7 @@ describe('components/form-elements/text-input/TextInput', () => {
             tooLong: true,
         };
 
-        const component = mount(<TextInput label="label" maxLength={10} name="input" value="" />, {
+        const component = mount(<TextInput label="bdl-Label" maxLength={10} name="input" value="" />, {
             context,
             childContextTypes,
         });
@@ -322,7 +322,7 @@ describe('components/form-elements/text-input/TextInput', () => {
             tooShort: true,
         };
 
-        const component = mount(<TextInput label="label" minLength={1} name="input" value="" />, {
+        const component = mount(<TextInput label="bdl-Label" minLength={1} name="input" value="" />, {
             context,
             childContextTypes,
         });

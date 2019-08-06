@@ -30,7 +30,7 @@ describe('features/content-explorer/item-list/ItemListName', () => {
         });
 
         test('should render component with label when specified', () => {
-            const label = 'label';
+            const label = 'bdl-Label';
             const wrapper = renderComponent({ label });
 
             expect(wrapper.find('.item-list-name-label').text()).toEqual(label);

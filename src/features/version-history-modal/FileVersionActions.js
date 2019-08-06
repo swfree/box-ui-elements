@@ -24,7 +24,7 @@ const FileVersionActions = ({
     version,
 }) => {
     const btnClasses = classNames('lnk', {
-        'is-disabled': isProcessing,
+        'bdl-is-disabled': isProcessing,
     });
 
     const renderRestoreButton = () => {

@@ -5,12 +5,12 @@ import Toggle from '..';
 
 describe('components/toggle/Toggle', () => {
     const getWrapper = (props = {}) =>
-        shallow(<Toggle label="Enter things" name="toggle" onChange={() => {}} {...props} />);
+        shallow(<Toggle label="Enter things" name="bdl-Toggle" onChange={() => {}} {...props} />);
 
     test('should correctly render default component', () => {
         const wrapper = getWrapper();
 
-        expect(wrapper.hasClass('toggle-container')).toBeTruthy();
+        expect(wrapper.hasClass('bdl-Toggle-container')).toBeTruthy();
         expect(wrapper.hasClass('is-toggle-right-aligned')).toBeFalsy();
         expect(wrapper.find('input').prop('checked')).toBeFalsy();
         expect(wrapper.find('.toggle-simple-description').length).toBeFalsy();

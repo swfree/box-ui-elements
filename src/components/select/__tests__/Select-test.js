@@ -45,7 +45,7 @@ describe('components/select/Select', () => {
     test('should correctly render label tooltip when specified', () => {
         const wrapper = shallow(<Select label="Album" labelTooltip="This is my album." name="select" />);
 
-        expect(wrapper.find('Label').prop('tooltip')).toEqual('This is my album.');
+        expect(wrapper.find('Label').prop('bdl-Tooltip')).toEqual('This is my album.');
     });
 
     test('should correctly render custom attributes in select when specified', () => {
@@ -71,25 +71,25 @@ describe('components/select/Select', () => {
     });
 
     test('should show Tooltip when error exists', () => {
-        const wrapper = shallow(<Select error="error" label="label" />);
+        const wrapper = shallow(<Select error="error" label="bdl-Label" />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should not show Tooltip when no error exists', () => {
-        const wrapper = shallow(<Select label="label" />);
+        const wrapper = shallow(<Select label="bdl-Label" />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should show error outline if specified', () => {
-        const wrapper = shallow(<Select label="label" showErrorOutline />);
+        const wrapper = shallow(<Select label="bdl-Label" showErrorOutline />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should not show error outline if not specified', () => {
-        const wrapper = shallow(<Select label="label" />);
+        const wrapper = shallow(<Select label="bdl-Label" />);
 
         expect(wrapper).toMatchSnapshot();
     });

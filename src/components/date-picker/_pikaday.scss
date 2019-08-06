@@ -91,7 +91,7 @@
     white-space: nowrap;
     width: 20px;
 
-    &.is-disabled {
+    &.bdl-is-disabled {
         cursor: default;
         opacity: .2;
     }
@@ -178,7 +178,7 @@
     font-weight: bold;
 }
 
-.is-disabled .pika-button,
+.bdl-is-disabled .pika-button,
 .is-outside-current-month .pika-button {
     cursor: default;
     opacity: .3;

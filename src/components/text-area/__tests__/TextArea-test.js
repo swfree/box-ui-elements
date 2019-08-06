@@ -4,7 +4,7 @@ import TextArea from '../TextArea';
 
 describe('components/text-area/TextArea', () => {
     test('should correctly render default component', () => {
-        const component = shallow(<TextArea label="label" name="name" />);
+        const component = shallow(<TextArea label="bdl-Label" name="name" />);
 
         expect(component.hasClass('text-area-container')).toBe(true);
     });
@@ -12,7 +12,7 @@ describe('components/text-area/TextArea', () => {
     test('should correctly render placeholder when defined', () => {
         const placeholder = 'a placeholder';
 
-        const component = shallow(<TextArea label="label" name="name" placeholder={placeholder} />);
+        const component = shallow(<TextArea label="bdl-Label" name="name" placeholder={placeholder} />);
 
         expect(component.find('textarea').prop('placeholder')).toEqual(placeholder);
     });
@@ -20,7 +20,7 @@ describe('components/text-area/TextArea', () => {
     test('should correctly render value when defined', () => {
         const value = 'a value';
 
-        const component = shallow(<TextArea label="label" name="name" value={value} />);
+        const component = shallow(<TextArea label="bdl-Label" name="name" value={value} />);
 
         expect(component.find('textarea').prop('value')).toEqual(value);
     });
@@ -50,32 +50,32 @@ describe('components/text-area/TextArea', () => {
     test('should correctly render name', () => {
         const name = 'a name';
 
-        const component = shallow(<TextArea label="label" name={name} />);
+        const component = shallow(<TextArea label="bdl-Label" name={name} />);
 
         expect(component.find('textarea').prop('name')).toEqual(name);
     });
 
     test('should show Tooltip when error exists', () => {
-        const wrapper = shallow(<TextArea error="error" label="label" />);
+        const wrapper = shallow(<TextArea error="error" label="bdl-Label" />);
 
         const tooltip = wrapper.find('Tooltip');
         expect(tooltip.prop('isShown')).toBe(true);
     });
 
     test('should not show Tooltip when no error exists', () => {
-        const wrapper = shallow(<TextArea label="label" />);
+        const wrapper = shallow(<TextArea label="bdl-Label" />);
 
         const tooltip = wrapper.find('Tooltip');
         expect(tooltip.prop('isShown')).toBe(false);
     });
 
     test('should not show optional text when hideOptionalLabel is true', () => {
-        const wrapper = shallow(<TextArea label="label" hideOptionalLabel />);
+        const wrapper = shallow(<TextArea label="bdl-Label" hideOptionalLabel />);
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should show optional text when hideOptionalLabel is false', () => {
-        const wrapper = shallow(<TextArea label="label" />);
+        const wrapper = shallow(<TextArea label="bdl-Label" />);
         expect(wrapper).toMatchSnapshot();
     });
 });

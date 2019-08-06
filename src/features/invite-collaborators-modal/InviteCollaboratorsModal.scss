@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .invite-collaborators-modal {
-    .label {
+    .bdl-Label {
         color: $bdl-gray-62;
         font-weight: 700;
     }
@@ -47,7 +47,7 @@
             overflow: auto;
         }
 
-        .pill-selector-input-wrapper {
+        .bdl-PillSelector-input-wrapper {
             height: 60px;
             width: 100%;
         }

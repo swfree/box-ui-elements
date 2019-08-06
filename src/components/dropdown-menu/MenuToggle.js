@@ -12,7 +12,7 @@ type Props = {
 const MenuToggle = ({ children }: Props) => (
     <span className="menu-toggle">
         {children}
-        <IconCaretDown className="toggle-arrow" width={7} />
+        <IconCaretDown className="bdl-Toggle-arrow" width={7} />
     </span>
 );
 

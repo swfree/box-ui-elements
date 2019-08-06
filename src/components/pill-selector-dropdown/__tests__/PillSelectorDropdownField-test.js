@@ -23,7 +23,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
     test('should render error when touched', () => {
         const wrapper = getWrapper({
             field: {
-                name: 'pill',
+                name: 'bdl-Pill',
             },
             form: {
                 errors: {
@@ -95,7 +95,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
             const onChange = jest.fn();
             const wrapper = getWrapper({
                 field: {
-                    name: 'pill',
+                    name: 'bdl-Pill',
                     onChange,
                     value: [{ displayText: 'foo' }],
                 },
@@ -104,7 +104,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
             instance.setState = jest.fn();
             instance.handleSelect([{ displayText: 'bar' }]);
             expect(onChange).toHaveBeenCalledWith({
-                target: { name: 'pill', value: [{ displayText: 'foo' }, { displayText: 'bar' }] },
+                target: { name: 'bdl-Pill', value: [{ displayText: 'foo' }, { displayText: 'bar' }] },
             });
         });
 
@@ -112,7 +112,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
             const onChange = jest.fn();
             const wrapper = getWrapper({
                 field: {
-                    name: 'pill',
+                    name: 'bdl-Pill',
                     onChange,
                     value: [{ displayText: 'foo' }],
                 },
@@ -121,7 +121,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
             instance.setState = jest.fn();
             instance.handleSelect([{ displayText: '   ' }, { displayText: '   ' }]);
             expect(onChange).toHaveBeenCalledWith({
-                target: { name: 'pill', value: [{ displayText: 'foo' }] },
+                target: { name: 'bdl-Pill', value: [{ displayText: 'foo' }] },
             });
         });
 
@@ -140,7 +140,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
             const onChange = jest.fn();
             const wrapper = getWrapper({
                 field: {
-                    name: 'pill',
+                    name: 'bdl-Pill',
                     onChange,
                     value: ['foo', 'bar'],
                 },
@@ -148,7 +148,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
             const instance = wrapper.instance();
             instance.setState = jest.fn();
             instance.handleRemove('bar', 1);
-            expect(onChange).toHaveBeenCalledWith({ target: { name: 'pill', value: ['foo'] } });
+            expect(onChange).toHaveBeenCalledWith({ target: { name: 'bdl-Pill', value: ['foo'] } });
         });
 
         test('should be called when onRemove is called', () => {
@@ -213,14 +213,14 @@ describe('components/pill-selector-dropdown/PillSelectorDropdownField', () => {
             const onBlur = jest.fn();
             const wrapper = getWrapper({
                 field: {
-                    name: 'pill',
+                    name: 'bdl-Pill',
                     onBlur,
                 },
             });
             const instance = wrapper.instance();
             instance.setState = jest.fn();
             instance.handleBlur();
-            expect(onBlur).toHaveBeenCalledWith({ target: { name: 'pill' } });
+            expect(onBlur).toHaveBeenCalledWith({ target: { name: 'bdl-Pill' } });
         });
 
         test('should be called when onBlur is called', () => {

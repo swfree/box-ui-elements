@@ -32,7 +32,7 @@ const SuggestedPillsRow = ({
     }
 
     return (
-        <div className="pill-selector-suggested">
+        <div className="bdl-PillSelector-suggested">
             <span>{title}</span>
             {filteredSuggestedPillData.map(item => (
                 <SuggestedPill

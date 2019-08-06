@@ -508,7 +508,7 @@ describe('features/content-explorer/content-explorer/ContentExplorer', () => {
         });
     });
 
-    describe('toggleSelectedItem', () => {
+    describe('bdl-ToggleSelectedItem', () => {
         [
             {
                 selectedItems: { id: { id: 'id', name: 'name' } },

@@ -43,7 +43,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdown', () => {
             const instance = wrapper.instance();
 
             expect(wrapper.is('SelectorDropdown')).toBe(true);
-            expect(wrapper.hasClass('pill-selector-wrapper')).toBe(true);
+            expect(wrapper.hasClass('bdl-PillSelector-wrapper')).toBe(true);
             expect(wrapper.hasClass(className)).toBe(true);
             expect(wrapper.prop('onEnter')).toEqual(instance.handleEnter);
             expect(wrapper.prop('onSelect')).toEqual(instance.handleSelect);
@@ -277,7 +277,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdown', () => {
 
         test('should call props.validateForError if no pills were added but input exists', () => {
             const pills = [];
-            const selectedOptions = [{ text: 'a pill', value: 'pill' }];
+            const selectedOptions = [{ text: 'a pill', value: 'bdl-Pill' }];
             const wrapper = shallow(
                 <PillSelectorDropdown
                     allowCustomPills
@@ -329,7 +329,7 @@ describe('components/pill-selector-dropdown/PillSelectorDropdown', () => {
 
         test('should not call props.validateForError if no pills were added, input is empty, and options are selected', () => {
             const pills = [];
-            const selectedOptions = [{ text: 'a pill', value: 'pill' }];
+            const selectedOptions = [{ text: 'a pill', value: 'bdl-Pill' }];
             const wrapper = shallow(
                 <PillSelectorDropdown
                     allowCustomPills

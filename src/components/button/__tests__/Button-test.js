@@ -15,7 +15,7 @@ describe('components/button/Button', () => {
 
         const wrapper = shallow(<Button>{children}</Button>);
 
-        expect(wrapper.hasClass('btn')).toBe(true);
+        expect(wrapper.hasClass('bdl-Button')).toBe(true);
         expect(wrapper.find('.btn-content').length).toEqual(1);
         expect(wrapper.text()).toEqual(children);
     });
@@ -33,7 +33,7 @@ describe('components/button/Button', () => {
         const wrapper = shallow(<Button onClick={onClickHandler} />);
 
         const contains = sinon.stub();
-        contains.withArgs('is-disabled').returns(false);
+        contains.withArgs('bdl-is-disabled').returns(false);
         wrapper.instance().btnElement = { classList: { contains } };
 
         wrapper.find('button').simulate('click');
@@ -48,7 +48,7 @@ describe('components/button/Button', () => {
         const wrapper = shallow(<Button isDisabled onClick={onClickHandler} />);
 
         const contains = sinon.stub();
-        contains.withArgs('is-disabled').returns(true);
+        contains.withArgs('bdl-is-disabled').returns(true);
         wrapper.instance().btnElement = { classList: { contains } };
 
         wrapper.find('button').simulate('click', { preventDefault, stopPropagation });
@@ -62,10 +62,10 @@ describe('components/button/Button', () => {
         const preventDefault = sinon.spy();
         const stopPropagation = sinon.spy();
 
-        const wrapper = shallow(<Button className="is-disabled" onClick={onClickHandler} />);
+        const wrapper = shallow(<Button className="bdl-is-disabled" onClick={onClickHandler} />);
 
         const contains = sinon.stub();
-        contains.withArgs('is-disabled').returns(true);
+        contains.withArgs('bdl-is-disabled').returns(true);
         wrapper.instance().btnElement = { classList: { contains } };
 
         wrapper.find('button').simulate('click', { preventDefault, stopPropagation });

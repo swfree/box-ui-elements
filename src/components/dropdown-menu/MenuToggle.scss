@@ -4,7 +4,7 @@
     align-items: center;
     display: flex;
 
-    > .toggle-arrow {
+    > .bdl-Toggle-arrow {
         flex: none;
         margin-left: 5px;
         transition: transform $bdl-transition-duration-200ms ease-in;
@@ -23,11 +23,11 @@
         }
     }
 
-    .btn-primary & .fill-color {
+    .bdl-Button--primary & .fill-color {
         fill: $white;
     }
 
-    .lnk.is-disabled & .fill-color {
+    .lnk.bdl-is-disabled & .fill-color {
         fill: $bdl-gray-50;
     }
 }

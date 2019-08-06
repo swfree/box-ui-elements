@@ -26,7 +26,7 @@ describe('elements/content-open-with/OpenWithButton', () => {
         });
 
         test('should return the display description if provided', () => {
-            const description = 'tooltip description';
+            const description = 'bdl-Tooltip description';
             const result = getTooltip(description, false, null, []);
             expect(result).toBe(description);
         });

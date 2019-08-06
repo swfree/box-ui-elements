@@ -4,8 +4,8 @@
 
 $pillTextColorDark: lighten($black, 31%);
 
-.pill,
-.btn.pill {
+.bdl-Pill,
+.bdl-Button.bdl-Pill {
     align-items: center;
     background-color: $primary-color;
     border-radius: 3px;
@@ -20,7 +20,7 @@ $pillTextColorDark: lighten($black, 31%);
     text-overflow: ellipsis;
     white-space: nowrap;
 
-    .pill-text {
+    .bdl-Pill-text {
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -39,7 +39,7 @@ $pillTextColorDark: lighten($black, 31%);
         padding: 4px 0 4px 4px;
     }
 
-    &.is-disabled {
+    &.bdl-is-disabled {
         opacity: .5;
 
         .close-btn {
@@ -56,7 +56,7 @@ $pillTextColorDark: lighten($black, 31%);
     }
 }
 
-.pill-warning {
+.bdl-Pill--warning {
     background-color: $bdl-yellorange-10;
     border: 1px solid $bdl-yellorange-50;
     color: $bdl-yellorange;
@@ -66,7 +66,7 @@ $pillTextColorDark: lighten($black, 31%);
     }
 }
 
-.pill-error {
+.bdl-Pill--error {
     background-color: $bdl-watermelon-red-10;
     border: 1px solid $bdl-watermelon-red-50;
     color: $bdl-watermelon-red;
@@ -76,7 +76,7 @@ $pillTextColorDark: lighten($black, 31%);
     }
 }
 
-.pill.pill-cloud-button {
+.bdl-Pill.bdl-PillCloud-button {
     background-color: $white;
     border: 1px solid $primary-color;
     color: $primary-color;
@@ -87,7 +87,7 @@ $pillTextColorDark: lighten($black, 31%);
         box-shadow: none;
     }
 
-    &:not(.is-disabled) {
+    &:not(.bdl-is-disabled) {
         &:focus {
             border-color: darken($primary-color, 8%);
             box-shadow: 0 1px 2px fade-out($black, .9);
@@ -95,7 +95,7 @@ $pillTextColorDark: lighten($black, 31%);
     }
 }
 
-.pill-cloud-container {
+.bdl-PillCloud-container {
     border: 1px solid $bdl-gray-10;
     overflow-y: scroll;
     padding: 8px;

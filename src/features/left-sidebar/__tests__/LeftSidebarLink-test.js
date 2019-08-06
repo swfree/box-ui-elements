@@ -66,7 +66,7 @@ describe('feature/left-sidebar/LeftSidebarLink', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    test('tooltip should take class from state', () => {
+    test('bdl-Tooltip should take class from state', () => {
         const isTextOverflowed = true;
         const isScrolling = false;
         const wrapper = getWrapper({ isScrolling });

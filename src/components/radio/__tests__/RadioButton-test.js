@@ -11,7 +11,7 @@ describe('components/radio/RadioButton', () => {
         const component = shallow(renderRadioButtons());
 
         expect(component.find('.radio-container')).toBeTruthy();
-        expect(component.find('label')).toBeTruthy();
+        expect(component.find('bdl-Label')).toBeTruthy();
         expect(component.find('input').prop('name')).toEqual('name1');
         expect(component.find('input').prop('checked')).toEqual(false);
         expect(component.find('input').prop('type')).toEqual('radio');

@@ -14,8 +14,8 @@
         height: 60px;
         justify-content: center;
 
-        // Need to add these overriding styles because there is a specificity issue with .btn-plain
-        .btn-plain.bdl-SidebarToggleButton {
+        // Need to add these overriding styles because there is a specificity issue with .bdl-Button--plain
+        .bdl-Button--plain.bdl-SidebarToggleButton {
             height: 24px;
             margin: 0 3px;
             padding: 4px;

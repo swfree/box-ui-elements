@@ -8,7 +8,7 @@ import Plural from '../Plural';
 
 function LinkButton(props) {
     return (
-        <a className="btn" href={props.to}>
+        <a className="bdl-Button" href={props.to}>
             {props.children}
         </a>
     );
@@ -95,7 +95,7 @@ describe('components/i18n', () => {
             expect(span.prop('children')).toContain('some ');
             expect(span.prop('children')).toContain(' text');
 
-            expect(wrapper.find('a').hasClass('btn')).toBe(true);
+            expect(wrapper.find('a').hasClass('bdl-Button')).toBe(true);
             expect(wrapper.find('a').prop('children')).toEqual('link');
             expect(wrapper.find('a').prop('href')).toEqual('foo');
         });

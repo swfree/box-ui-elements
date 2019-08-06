@@ -4,10 +4,10 @@
  * Toggle
  **************************************/
 
-.toggle-container {
+.bdl-Toggle-container {
     margin: 0 0 20px;
 
-    .toggle-label {
+    .bdl-Toggle-label {
         display: inline-block;
         line-height: 15px;
         margin: 5px 10px;
@@ -15,7 +15,7 @@
     }
 }
 
-.toggle {
+.bdl-Toggle {
     display: none;
 
     &,
@@ -24,7 +24,7 @@
     *,
     *::after,
     *::before,
-    & + .toggle-btn {
+    & + .bdl-Toggle-btn {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -35,7 +35,7 @@
         }
     }
 
-    + .toggle-btn {
+    + .bdl-Toggle-btn {
         background: $bdl-gray-30;
         border-radius: 40px;
         cursor: pointer;
@@ -73,7 +73,7 @@
     }
 
     &:checked {
-        + .toggle-btn {
+        + .bdl-Toggle-btn {
             background: $primary-color;
 
             &::after {
@@ -90,7 +90,7 @@
 $height: 20px;
 $width: $height * 2;
 
-.toggle-simple {
+.bdl-Toggle-simple {
     border-radius: $height;
     display: flex;
     height: $height;
@@ -104,13 +104,13 @@ $width: $height * 2;
     }
 }
 
-.toggle-simple-input {
+.bdl-Toggle-simple-input {
     left: -9999px;
     opacity: 0; // this keeps the element tab-able
     position: absolute;
 }
 
-.toggle-simple-label {
+.bdl-Toggle-simple-label {
     display: inline-block;
     margin-left: $width + 6;
     min-width: 0;
@@ -124,7 +124,7 @@ $width: $height * 2;
     }
 }
 
-.toggle-simple-description {
+.bdl-Toggle-simple-description {
     color: $bdl-gray-50;
     margin-left: $width + 6;
     margin-top: 2px;
@@ -135,7 +135,7 @@ $width: $height * 2;
     }
 }
 
-.toggle-simple-switch {
+.bdl-Toggle-simple-switch {
     display: inline-block;
 
     // NOTE: targets ie11
@@ -175,7 +175,7 @@ $width: $height * 2;
         width: $height;
     }
 
-    .toggle-simple-input:checked ~ & {
+    .bdl-Toggle-simple-input:checked ~ & {
         &::before {
             background-color: $primary-color;
         }
@@ -185,7 +185,7 @@ $width: $height * 2;
         }
     }
 
-    .toggle-simple-input:disabled ~ & {
+    .bdl-Toggle-simple-input:disabled ~ & {
         &::before,
         &::after {
             cursor: default;
@@ -201,7 +201,7 @@ $width: $height * 2;
         }
     }
 
-    .toggle-simple-input:focus ~ & {
+    .bdl-Toggle-simple-input:focus ~ & {
         &::after {
             border-color: $primary-color;
         }

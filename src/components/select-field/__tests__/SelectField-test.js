@@ -9,7 +9,7 @@ describe('components/select-feild/SelectField', () => {
     test('should render properly for single select field', () => {
         const wrapper = getWrapper({
             field: {
-                name: 'toggle',
+                name: 'bdl-Toggle',
                 value: 'value',
                 onBlur: 'onblur',
                 onChange: 'onchange',
@@ -23,7 +23,7 @@ describe('components/select-feild/SelectField', () => {
     test('should render properly for multi select field', () => {
         const wrapper = getWrapper({
             field: {
-                name: 'toggle',
+                name: 'bdl-Toggle',
                 value: 'value',
                 onBlur: 'onblur',
                 onChange: 'onchange',

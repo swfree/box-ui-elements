@@ -13,27 +13,27 @@ describe('components/form-elements/text-area/TextArea', () => {
     });
 
     test('should correctly render default component', () => {
-        const wrapper = shallow(<TextArea label="label" name="textarea" />);
+        const wrapper = shallow(<TextArea label="bdl-Label" name="textarea" />);
 
         expect(wrapper.find('TextArea').length).toEqual(1);
     });
 
     test('should mark required fields invalid when empty', () => {
-        const wrapper = mount(<TextArea className="coverage" isRequired label="label" name="input" />);
+        const wrapper = mount(<TextArea className="coverage" isRequired label="bdl-Label" name="input" />);
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
         expect(wrapper.find('.text-area-container').hasClass('show-error')).toBeTruthy();
     });
 
     test('should mark required fields valid when not empty', () => {
-        const wrapper = mount(<TextArea isRequired label="label" name="textarea" value="baba" />);
+        const wrapper = mount(<TextArea isRequired label="bdl-Label" name="textarea" value="baba" />);
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
         expect(wrapper.find('.text-area-container').hasClass('show-error')).toBeFalsy();
     });
 
     test('should correctly validate when change event is fired', () => {
-        const wrapper = mount(<TextArea isRequired label="label" name="textarea" value="" />);
+        const wrapper = mount(<TextArea isRequired label="bdl-Label" name="textarea" value="" />);
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
 
@@ -53,7 +53,7 @@ describe('components/form-elements/text-area/TextArea', () => {
     test('should set an textarea as valid when the validityFn returns an void', () => {
         function validityFn() {}
 
-        const wrapper = mount(<TextArea label="label" name="textarea" type="custom" validation={validityFn} />);
+        const wrapper = mount(<TextArea label="bdl-Label" name="textarea" type="custom" validation={validityFn} />);
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
 
@@ -69,7 +69,7 @@ describe('components/form-elements/text-area/TextArea', () => {
         }
 
         const wrapper = mount(
-            <TextArea label="label" name="textarea" type="custom" validation={validityFn} value="yes" />,
+            <TextArea label="bdl-Label" name="textarea" type="custom" validation={validityFn} value="yes" />,
         );
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
@@ -87,7 +87,9 @@ describe('components/form-elements/text-area/TextArea', () => {
 
         stub.onCall(1).returns();
 
-        const wrapper = mount(<TextArea label="label" name="textarea" type="custom" validation={stub} value="yes" />);
+        const wrapper = mount(
+            <TextArea label="bdl-Label" name="textarea" type="custom" validation={stub} value="yes" />,
+        );
         let textarea = wrapper.find('textarea');
 
         textarea.simulate('blur');
@@ -108,7 +110,7 @@ describe('components/form-elements/text-area/TextArea', () => {
             };
         }
 
-        const wrapper = mount(<TextArea label="label" name="textarea" type="custom" validation={validityFn} />);
+        const wrapper = mount(<TextArea label="bdl-Label" name="textarea" type="custom" validation={validityFn} />);
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
 
@@ -124,7 +126,7 @@ describe('components/form-elements/text-area/TextArea', () => {
         }
 
         const wrapper = mount(
-            <TextArea isRequired label="label" name="textarea" type="custom" validation={validityFn} />,
+            <TextArea isRequired label="bdl-Label" name="textarea" type="custom" validation={validityFn} />,
         );
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
@@ -133,7 +135,7 @@ describe('components/form-elements/text-area/TextArea', () => {
     });
 
     test('should re-validate when textarea is set via props programaticallly', () => {
-        const wrapper = mount(<TextArea isRequired label="label" name="textarea" value="" />);
+        const wrapper = mount(<TextArea isRequired label="bdl-Label" name="textarea" value="" />);
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
 
@@ -153,7 +155,7 @@ describe('components/form-elements/text-area/TextArea', () => {
     });
 
     test('should validate onChange when textarea is already in error state', () => {
-        const wrapper = mount(<TextArea isRequired label="label" name="textarea" value="" />);
+        const wrapper = mount(<TextArea isRequired label="bdl-Label" name="textarea" value="" />);
         const textarea = wrapper.find('textarea');
         textarea.simulate('blur');
 
@@ -185,7 +187,10 @@ describe('components/form-elements/text-area/TextArea', () => {
             errorMessage: 'Error Message',
         };
 
-        const component = mount(<TextArea label="label" name="textarea" value="" />, { context, childContextTypes });
+        const component = mount(<TextArea label="bdl-Label" name="textarea" value="" />, {
+            context,
+            childContextTypes,
+        });
 
         validityStateHandlerSpy.callArgWith(1, error);
 
@@ -208,7 +213,10 @@ describe('components/form-elements/text-area/TextArea', () => {
             badInput: true,
         };
 
-        const component = mount(<TextArea label="label" name="textarea" value="" />, { context, childContextTypes });
+        const component = mount(<TextArea label="bdl-Label" name="textarea" value="" />, {
+            context,
+            childContextTypes,
+        });
 
         validityStateHandlerSpy.callArgWith(1, error);
         expect(component.state('error').code).toEqual('badInput');

@@ -176,7 +176,7 @@ describe('components/notification/Notification', () => {
         const wrapper = mount(
             <Notification>
                 <span>test</span>
-                <button type="button" className="btn">
+                <button type="button" className="bdl-Button">
                     dostuff
                 </button>
             </Notification>,

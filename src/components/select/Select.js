@@ -44,7 +44,7 @@ const Select = ({
 }: Props) => {
     const classes = classNames(className, 'select-input-container', {
         'show-error': !!error || showErrorOutline,
-        'is-disabled': isDisabled,
+        'bdl-is-disabled': isDisabled,
     });
 
     return (
@@ -61,7 +61,7 @@ const Select = ({
                         </span>
                         {infoTooltip && (
                             <Tooltip position="middle-right" text={infoTooltip}>
-                                <span className="tooltip-icon-container">
+                                <span className="bdl-Tooltip-iconContainer">
                                     <IconInfo height={16} width={16} {...infoIconProps} />
                                 </span>
                             </Tooltip>

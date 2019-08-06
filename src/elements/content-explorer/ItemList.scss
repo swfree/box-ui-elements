@@ -22,7 +22,7 @@
     .bce-more-options {
         opacity: 0;
 
-        .btn {
+        .bdl-Button {
             background-color: transparent;
             margin-left: 8px;
         }
@@ -43,7 +43,7 @@
         }
 
         .bce-item-coloumn,
-        .be & .btn-plain {
+        .be & .bdl-Button--plain {
             color: $dark-cerulean;
             outline: none;
         }
@@ -58,7 +58,7 @@
         }
 
         .bce-item-coloumn,
-        .be & .btn-plain {
+        .be & .bdl-Button--plain {
             color: $dark-cerulean;
         }
     }

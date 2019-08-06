@@ -47,14 +47,14 @@ $transform-duration: .125s;
     }
 }
 
-.toggle-overlay-container {
-    > .btn {
+.bdl-Toggle-overlayContainer {
+    > .bdl-Button {
         margin-bottom: 0;
         margin-left: 0;
     }
 }
 
-.toggle-overlay {
+.bdl-Toggle-overlay {
     .overlay {
         margin-top: 5px;
     }

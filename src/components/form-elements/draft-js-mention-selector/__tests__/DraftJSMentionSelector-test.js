@@ -15,7 +15,7 @@ describe('bcomponents/form-elements/draft-js-mention-selector/DraftJSMentionSele
 
     const requiredProps = {
         contacts: [],
-        label: 'label',
+        label: 'bdl-Label',
         name: 'name',
         onMention: () => {},
     };

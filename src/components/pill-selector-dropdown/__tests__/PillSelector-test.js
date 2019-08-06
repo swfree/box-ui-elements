@@ -153,7 +153,7 @@ describe('components/pill-selector-dropdown/PillSelector', () => {
             );
             const input = wrapper.find('textarea');
 
-            expect(input.hasClass('pill-selector-input')).toBe(true);
+            expect(input.hasClass('bdl-PillSelector-input')).toBe(true);
             expect(input.hasClass(className)).toBe(true);
         });
 

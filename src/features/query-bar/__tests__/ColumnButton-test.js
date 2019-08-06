@@ -80,7 +80,7 @@ describe('features/query-bar/components/ColumnButton', () => {
         });
     });
 
-    describe('toggleColumnButton()', () => {
+    describe('bdl-ToggleColumnButton()', () => {
         [
             {
                 description: 'Should update state with new ordering',

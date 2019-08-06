@@ -22,7 +22,7 @@ describe('components/text-input-with-copy-button/TextInputWithCopyButton', () =>
             <TextInputWithCopyButton
                 buttonDefaultText={buttonDefaultText}
                 buttonSuccessText={buttonSuccessText}
-                label="label"
+                label="bdl-Label"
                 value={1}
                 {...props}
             />,
@@ -125,7 +125,7 @@ describe('components/text-input-with-copy-button/TextInputWithCopyButton', () =>
                 <TextInputWithCopyButton
                     buttonDefaultText={buttonDefaultText}
                     buttonSuccessText={buttonSuccessText}
-                    label="label"
+                    label="bdl-Label"
                     value={1}
                 />,
             );

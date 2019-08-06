@@ -15,7 +15,7 @@
         font-weight: 700;
     }
 
-    .tooltip-close-button {
+    .bdl-Tooltip-closeButton {
         right: 4px;
         top: 8px;
     }
@@ -91,17 +91,17 @@
         margin-top: 0;
     }
 
-    .pill-selector-wrapper .pill-selector-input-wrapper, // need both selectors for specificity
+    .bdl-PillSelector-wrapper .bdl-PillSelector-input-wrapper, // need both selectors for specificity
     textarea {
         /* override for DOM element in `TextArea` which provides no id/class for targeting */
         width: 100%;
     }
 
-    .pill-selector-wrapper {
+    .bdl-PillSelector-wrapper {
         margin-bottom: 10px;
     }
 
-    .pill-selector-wrapper.scrollable {
+    .bdl-PillSelector-wrapper.scrollable {
         .overlay-wrapper {
             border: 1px solid $bdl-gray-30;
             height: 280px;
@@ -124,25 +124,25 @@
             color: $bdl-gray-50;
         }
 
-        .pill-selector-input-wrapper {
+        .bdl-PillSelector-input-wrapper {
             min-height: 68px;
         }
     }
 
-    .pill-selector-input-wrapper {
+    .bdl-PillSelector-input-wrapper {
         border: 1px solid $bdl-gray-20;
         margin-top: 10px;
 
-        .pill-selector-input::placeholder {
+        .bdl-PillSelector-input::placeholder {
             color: $bdl-gray-50;
         }
 
-        &.is-disabled {
+        &.bdl-is-disabled {
             background-color: $bdl-gray-02;
             box-shadow: none;
             color: $bdl-gray-30;
 
-            .pill-selector-input::placeholder {
+            .bdl-PillSelector-input::placeholder {
                 color: $bdl-gray-50;
             }
 
@@ -164,11 +164,11 @@
             margin-bottom: 0;
             overflow-y: hidden;
 
-            .toggle-container {
+            .bdl-Toggle-container {
                 margin-bottom: 0;
             }
 
-            .toggle-simple-label {
+            .bdl-Toggle-simple-label {
                 color: $bdl-gray;
                 cursor: pointer;
             }
@@ -213,7 +213,7 @@
     }
 
     .shared-link-access-row {
-        .btn-plain {
+        .bdl-Button--plain {
             margin-right: 10px;
 
             &.can-edit-btn {

@@ -1,12 +1,12 @@
 @import '../../../common/variables';
 
 .be-keywords {
-    .pill-cloud-container {
+    .bdl-PillCloud-container {
         border: 0 none;
         overflow: hidden;
         padding: 0;
 
-        .btn.pill.pill-cloud-button {
+        .bdl-Button.bdl-Pill.bdl-PillCloud-button {
             border: 1px solid $see-see;
             color: inherit;
             margin: 0 5px 5px 0;

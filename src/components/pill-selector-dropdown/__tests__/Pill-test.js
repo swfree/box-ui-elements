@@ -8,7 +8,7 @@ describe('components/pill-selector-dropdown/Pill', () => {
     test('should render default component', () => {
         const wrapper = shallow(<Pill onRemove={onRemoveStub} text="box" />);
 
-        expect(wrapper.hasClass('pill')).toBe(true);
+        expect(wrapper.hasClass('bdl-Pill')).toBe(true);
         expect(wrapper.hasClass('is-selected')).toBe(false);
         expect(wrapper.childAt(0).text()).toEqual('box');
         expect(wrapper.childAt(1).hasClass('close-btn')).toBe(true);
@@ -31,7 +31,7 @@ describe('components/pill-selector-dropdown/Pill', () => {
         const wrapper = shallow(<Pill isDisabled isValid onRemove={onRemoveMock} text="box" />);
         wrapper.simulate('click');
         expect(onRemoveMock).not.toBeCalled();
-        expect(wrapper.childAt(0).hasClass('is-disabled'));
+        expect(wrapper.childAt(0).hasClass('bdl-is-disabled'));
     });
 
     test('should not call click handler when isDisabled is true', () => {

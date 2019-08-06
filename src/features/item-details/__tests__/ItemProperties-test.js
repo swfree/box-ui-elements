@@ -51,7 +51,7 @@ describe('features/item-details/ItemProperties', () => {
         const wrapper = getWrapper({
             classificationProps: {
                 openModal: () => {},
-                tooltip: 'tooltip',
+                tooltip: 'bdl-Tooltip',
                 value: 'value',
             },
         });

@@ -5,7 +5,7 @@ import TextInput from '..';
 
 describe('components/text-input/TextInput', () => {
     test('should correctly render default component', () => {
-        const wrapper = shallow(<TextInput label="label" name="input" />);
+        const wrapper = shallow(<TextInput label="bdl-Label" name="input" />);
 
         expect(wrapper.hasClass('text-input-container')).toBeTruthy();
         expect(wrapper.find('Label').length).toEqual(1);
@@ -15,14 +15,14 @@ describe('components/text-input/TextInput', () => {
 
     test('should correctly render placeholder when defined', () => {
         const placeholder = 'a placeholder';
-        const wrapper = shallow(<TextInput label="label" name="input" placeholder={placeholder} />);
+        const wrapper = shallow(<TextInput label="bdl-Label" name="input" placeholder={placeholder} />);
 
         expect(wrapper.find('input').prop('placeholder')).toEqual(placeholder);
     });
 
     test('should correctly render value when defined', () => {
         const value = 'a value';
-        const wrapper = shallow(<TextInput label="label" name="input" value={value} />);
+        const wrapper = shallow(<TextInput label="bdl-Label" name="input" value={value} />);
 
         expect(wrapper.find('input').prop('value')).toEqual(value);
     });
@@ -35,71 +35,71 @@ describe('components/text-input/TextInput', () => {
     });
 
     test('should correctly render required optional if not required', () => {
-        const wrapper = mount(<TextInput label="label" name="input" />);
+        const wrapper = mount(<TextInput label="bdl-Label" name="input" />);
 
         expect(wrapper.find('Label').prop('showOptionalText')).toBe(true);
     });
 
     test('should correctly render label tooltip when specified', () => {
         const labelTooltip = 'This is a label.';
-        const wrapper = mount(<TextInput label="label" labelTooltip={labelTooltip} name="input" />);
+        const wrapper = mount(<TextInput label="bdl-Label" labelTooltip={labelTooltip} name="input" />);
 
-        expect(wrapper.find('Label').prop('tooltip')).toEqual(labelTooltip);
+        expect(wrapper.find('Label').prop('bdl-Tooltip')).toEqual(labelTooltip);
     });
 
     test('should hide optional label text when specified', () => {
-        const wrapper = mount(<TextInput hideOptionalLabel label="label" name="input" />);
+        const wrapper = mount(<TextInput hideOptionalLabel label="bdl-Label" name="input" />);
 
         expect(wrapper.find('Label').prop('showOptionalText')).toBe(false);
     });
 
     test('should correctly render LoadingIndicator if it is loading', () => {
-        const wrapper = shallow(<TextInput isLoading label="label" />);
+        const wrapper = shallow(<TextInput isLoading label="bdl-Label" />);
 
         expect(wrapper.find('.text-input-loading').length).toBe(1);
     });
 
     test('should correctly render IconVerified if it is valid', () => {
-        const wrapper = shallow(<TextInput isValid label="label" />);
+        const wrapper = shallow(<TextInput isValid label="bdl-Label" />);
 
         expect(wrapper.find('.text-input-verified').length).toBe(1);
     });
 
     test('should not render LoadingIndicator if not loading', () => {
-        const wrapper = shallow(<TextInput label="label" />);
+        const wrapper = shallow(<TextInput label="bdl-Label" />);
 
         expect(wrapper.find('.text-input-loading').length).toBe(0);
     });
 
     test('should not render IconVerified if not valid', () => {
-        const wrapper = shallow(<TextInput label="label" />);
+        const wrapper = shallow(<TextInput label="bdl-Label" />);
 
         expect(wrapper.find('.text-input-verified').length).toBe(0);
     });
 
     test('should not render LoadingIndicator or IconVerified if both loading and valid', () => {
-        const wrapper = shallow(<TextInput isLoading isValid label="label" />);
+        const wrapper = shallow(<TextInput isLoading isValid label="bdl-Label" />);
 
         expect(wrapper.find('.text-input-loading').length).toBe(0);
         expect(wrapper.find('.text-input-verified').length).toBe(0);
     });
 
     test('should show Tooltip when error exists', () => {
-        const wrapper = shallow(<TextInput error="error" label="label" />);
+        const wrapper = shallow(<TextInput error="error" label="bdl-Label" />);
 
         const tooltip = wrapper.find('Tooltip');
         expect(tooltip.prop('isShown')).toBe(true);
     });
 
     test('should show Tooltip for an error at a custom position', () => {
-        const wrapper = shallow(<TextInput error="error" errorPosition="bottom-center" label="label" />);
+        const wrapper = shallow(<TextInput error="error" errorPosition="bottom-center" label="bdl-Label" />);
 
         const tooltip = wrapper.find('Tooltip');
         expect(tooltip.prop('position')).toBe('bottom-center');
     });
 
     test('should not show Tooltip when no error exists', () => {
-        const wrapper = shallow(<TextInput label="label" />);
+        const wrapper = shallow(<TextInput label="bdl-Label" />);
 
         const tooltip = wrapper.find('Tooltip');
         expect(tooltip.prop('isShown')).toBe(false);

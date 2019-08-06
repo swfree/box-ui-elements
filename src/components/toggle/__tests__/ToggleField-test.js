@@ -12,7 +12,7 @@ describe('components/toggle/ToggleField', () => {
             const wrapper = getWrapper({
                 field: {
                     value,
-                    name: 'toggle',
+                    name: 'bdl-Toggle',
                     onBlur: 'onblur',
                     onChange: 'onchange',
                 },

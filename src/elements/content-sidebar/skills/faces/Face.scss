@@ -7,7 +7,7 @@
         position: relative; // For delete and minus icons
     }
 
-    .btn-plain.be-face {
+    .bdl-Button--plain.be-face {
         border-radius: 100%;
         overflow: hidden;
 
@@ -38,12 +38,12 @@
         }
     }
 
-    .be-face-unselected .btn-plain.be-face img {
+    .be-face-unselected .bdl-Button--plain.be-face img {
         filter: none;
         opacity: .4;
     }
 
-    .btn-plain.be-face-delete {
+    .bdl-Button--plain.be-face-delete {
         background-color: white;
         border: 1px solid $bdl-gray-50;
         border-radius: 100%;
@@ -56,7 +56,7 @@
     }
 
     &.be-faces-is-editing {
-        .btn-plain.be-face:hover img {
+        .bdl-Button--plain.be-face:hover img {
             cursor: default;
             transform: none;
         }

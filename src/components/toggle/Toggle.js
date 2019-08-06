@@ -38,12 +38,12 @@ const Toggle = ({
     onBlur,
     onChange,
 }: Props) => {
-    const classes = classNames('toggle-container', className, {
+    const classes = classNames('bdl-Toggle-container', className, {
         'is-toggle-right-aligned': isToggleRightAligned,
     });
     let toggleElements = [
-        <div key="toggle-simple-switch" className="toggle-simple-switch" />,
-        <div key="toggle-simple-label" className="toggle-simple-label">
+        <div key="bdl-Toggle-simpleSwitch" className="bdl-Toggle-simpleSwitch" />,
+        <div key="bdl-Toggle-simple-label" className="bdl-Toggle-simple-label">
             {label}
         </div>,
     ];
@@ -55,10 +55,10 @@ const Toggle = ({
     return (
         <div className={classes}>
             {/* eslint-disable-next-line jsx-a11y/label-has-for */}
-            <label className="toggle-simple">
+            <label className="bdl-Toggle-simple">
                 <input
                     checked={isOn}
-                    className="toggle-simple-input"
+                    className="bdl-Toggle-simple-input"
                     disabled={isDisabled}
                     name={name}
                     onBlur={onBlur}
@@ -68,7 +68,7 @@ const Toggle = ({
                 />
                 {toggleElements}
             </label>
-            {description ? <div className="toggle-simple-description">{description}</div> : null}
+            {description ? <div className="bdl-Toggle-simple-description">{description}</div> : null}
         </div>
     );
 };

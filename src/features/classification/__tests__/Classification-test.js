@@ -37,7 +37,7 @@ describe('features/classification/Classification', () => {
         const wrapper = getWrapper({
             name: 'Confidential',
             advisoryMessage: 'fubar',
-            messageStyle: 'tooltip',
+            messageStyle: 'bdl-Tooltip',
         });
         expect(wrapper).toMatchSnapshot();
     });

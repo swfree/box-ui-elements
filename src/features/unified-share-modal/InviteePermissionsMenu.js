@@ -89,7 +89,7 @@ class InviteePermissionsMenu extends Component<Props> {
         const plainButton = (
             <PlainButton
                 className={classNames('lnk', {
-                    'is-disabled': disabled,
+                    'bdl-is-disabled': disabled,
                 })}
                 disabled={disabled}
                 {...inviteePermissionsButtonProps}
@@ -108,7 +108,7 @@ class InviteePermissionsMenu extends Component<Props> {
 
         const plainButtonWrap = disabled ? (
             <Tooltip position="bottom-center" text={disabledTooltip}>
-                <div className="tooltip-target">{plainButton}</div>
+                <div className="bdl-Tooltip-target">{plainButton}</div>
             </Tooltip>
         ) : (
             plainButton

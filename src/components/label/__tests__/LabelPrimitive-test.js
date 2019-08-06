@@ -12,7 +12,7 @@ describe('components/label/LabelPrimitive', () => {
             </LabelPrimitive>,
         );
 
-        expect(wrapper.find('label').length).toEqual(1);
+        expect(wrapper.find('bdl-Label').length).toEqual(1);
         expect(wrapper.find('span.label').length).toEqual(1);
         expect(wrapper.find('.label').prop('children')).toEqual(labelContent);
         expect(wrapper.find('input').length).toEqual(1);
@@ -28,7 +28,7 @@ describe('components/label/LabelPrimitive', () => {
             </LabelPrimitive>,
         );
 
-        expect(wrapper.find('.label').prop('className')).toEqual('label this is a test');
+        expect(wrapper.find('.label').prop('className')).toEqual('bdl-Label this is a test');
     });
 
     test('should fire passed mouse enter handler', () => {

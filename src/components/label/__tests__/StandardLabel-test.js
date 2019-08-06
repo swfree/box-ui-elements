@@ -14,7 +14,7 @@ describe('components/label/StandardLabel', () => {
         );
 
         expect(wrapper.find('LabelPrimitive').length).toEqual(1);
-        expect(wrapper.find('LabelPrimitive').prop('labelContent')[0]).toEqual(labelContent[0]);
+        expect(wrapper.find('LabelPrimitive').prop('bdl-LabelContent')[0]).toEqual(labelContent[0]);
     });
 
     test('should correctly render text tooltip when specified', () => {

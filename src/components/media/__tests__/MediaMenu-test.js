@@ -5,7 +5,7 @@ import MediaMenu from '../MediaMenu';
 describe('components/Media/MediaMenu', () => {
     test('props are spread onto button', () => {
         const extraProps = {
-            'aria-label': 'label for menu',
+            'aria-label': 'bdl-Label for menu',
             'data-testid': 'a-menu',
             'resin-target': 'my-menu',
         };

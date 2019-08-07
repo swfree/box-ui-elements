@@ -40,7 +40,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleWithTheLink"
+        key="bdl-Tooltip-peopleWithTheLink"
         position="top-center"
         text={
           <FormattedMessage
@@ -73,7 +73,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleInYourCompany"
+        key="bdl-Tooltip-peopleInYourCompany"
         position="top-center"
         text={
           <FormattedMessage
@@ -106,7 +106,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleInThisItem"
+        key="bdl-Tooltip-peopleInThisItem"
         position="top-center"
         text={
           <FormattedMessage
@@ -180,7 +180,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleWithTheLink"
+        key="bdl-Tooltip-peopleWithTheLink"
         position="top-center"
         text={
           <FormattedMessage
@@ -213,7 +213,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleInYourCompany"
+        key="bdl-Tooltip-peopleInYourCompany"
         position="top-center"
         text={
           <FormattedMessage
@@ -246,7 +246,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleInThisItem"
+        key="bdl-Tooltip-peopleInThisItem"
         position="top-center"
         text={
           <FormattedMessage
@@ -320,7 +320,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleWithTheLink"
+        key="bdl-Tooltip-peopleWithTheLink"
         position="top-center"
         text={
           <FormattedMessage
@@ -353,7 +353,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleInYourCompany"
+        key="bdl-Tooltip-peopleInYourCompany"
         position="top-center"
         text={
           <FormattedMessage
@@ -386,7 +386,7 @@ exports[`features/unified-share-modal/SharedLinkAccessMenu render() should rende
         constrainToScrollParent={false}
         constrainToWindow={true}
         isDisabled={false}
-        key="tooltip-peopleInThisItem"
+        key="bdl-Tooltip-peopleInThisItem"
         position="top-center"
         text={
           <FormattedMessage

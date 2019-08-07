@@ -107,7 +107,7 @@ exports[`components/select/Select should render infoTooltip when specified 1`] =
           theme="default"
         >
           <span
-            className="tooltip-icon-container"
+            className="bdl-Tooltip-iconContainer"
           >
             <IconInfo
               height={16}

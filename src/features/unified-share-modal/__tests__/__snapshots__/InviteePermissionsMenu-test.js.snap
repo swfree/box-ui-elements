@@ -23,7 +23,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
           className="lnk is-disabled"
@@ -255,7 +255,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
           className="lnk is-disabled"
@@ -487,7 +487,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
           className="lnk is-disabled"
@@ -719,7 +719,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
           className="lnk is-disabled"
@@ -951,7 +951,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
           className="lnk is-disabled"
@@ -1183,7 +1183,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
           className="lnk is-disabled"
@@ -1522,7 +1522,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
           className="lnk is-disabled"
@@ -1639,7 +1639,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() should ren
   theme="default"
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <PlainButton
       className="lnk is-disabled"
@@ -1672,7 +1672,7 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() should ren
   theme="default"
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <PlainButton
       className="lnk is-disabled"

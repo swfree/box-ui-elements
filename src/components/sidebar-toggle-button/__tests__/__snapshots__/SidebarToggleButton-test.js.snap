@@ -24,7 +24,7 @@ exports[`components/sidebar-toggle-button/SidebarToggleButton should render corr
       <TetherComponent
         attachment="middle right"
         bodyElement={<body />}
-        classPrefix="tooltip"
+        classPrefix="bdl-Tooltip"
         constraints={
           Array [
             Object {
@@ -121,7 +121,7 @@ exports[`components/sidebar-toggle-button/SidebarToggleButton should render corr
       <TetherComponent
         attachment="middle left"
         bodyElement={<body />}
-        classPrefix="tooltip"
+        classPrefix="bdl-Tooltip"
         constraints={
           Array [
             Object {
@@ -218,7 +218,7 @@ exports[`components/sidebar-toggle-button/SidebarToggleButton should render corr
       <TetherComponent
         attachment="middle left"
         bodyElement={<body />}
-        classPrefix="tooltip"
+        classPrefix="bdl-Tooltip"
         constraints={
           Array [
             Object {
@@ -313,7 +313,7 @@ exports[`components/sidebar-toggle-button/SidebarToggleButton should render corr
       <TetherComponent
         attachment="middle right"
         bodyElement={<body />}
-        classPrefix="tooltip"
+        classPrefix="bdl-Tooltip"
         constraints={
           Array [
             Object {

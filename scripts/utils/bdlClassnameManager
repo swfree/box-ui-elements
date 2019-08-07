@@ -35,12 +35,6 @@ const extendedConversionMap = {
     /* TOOLTIP */
     'tooltip-icon-container': 'bdl-Tooltip-iconContainer',
     'tooltip-close-button': 'bdl-Tooltip-closeButton',
-    'tooltip-target-attached-top': 'bdl-Tooltip--targetAattachedTop',
-    'tooltip-target-attached-center': 'bdl-Tooltip--targetAattachedCenter',
-    'tooltip-target-attached-left': 'bdl-Tooltip--targetAattachedLeft',
-    'tooltip-target-attached-right': 'bdl-Tooltip--targetAattachedRight',
-    'tooltip-target-attached-middle': 'bdl-Tooltip--targetAattachedMiddle',
-    'tooltip-target-attached-bottom': 'bdl-Tooltip--targetAattachedBottom',
     /* BUTTON */
     // 'btn-primary': 'bdl-Button--primary',
     // 'btn-plain': 'bdl-Button--plain',
@@ -60,7 +54,7 @@ const extendedConversionMap = {
     // 'pill-selector-hidden-input': 'bdl-PillSelector-hiddenInput',
     // 'pill-selector-input': 'bdl-PillSelector-input',
     // 'pill-selector-input-wrapper': 'bdl-PillSelector-inputWrapper',
-    // 'pill-selector-suggested': 'bdl-PillSelector-suggested',
+    // 'pill-selector-suggested': 'bdl-PillSelector--suggested',
     // 'pill-selector-suggestions-enabled': 'bdl-PillSelector--suggestionsEnabled',
     // 'pill-selector-wrapper': 'bdl-PillSelector-wrapper',
     // 'pill-warning': 'bdl-Pill--warning',
@@ -68,7 +62,7 @@ const extendedConversionMap = {
     /* TOGGLE */
     // 'toggle-overlay-container': 'bdl-Toggle-overlayContainer',
     // 'toggle-simple-switch': 'bdl-Toggle-simpleSwitch',
-    // 'toggle-simple': 'bdl-Toggle-simple',
+    // 'toggle-simple': 'bdl-Toggle--simple',
     // 'toggle-simple-input': 'bdl-Toggle-simpleInput',
     // 'toggle-simple-description': 'bdl-Toggle-simpleDescription',
 };

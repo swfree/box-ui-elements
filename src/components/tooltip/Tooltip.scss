@@ -74,7 +74,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedTop.bdl-Tooltip--targetAattachedCenter > & {
+    .bdl-Tooltip-target-attached-top.bdl-Tooltip-target-attached-center > & {
         margin-bottom: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -92,7 +92,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedTop.bdl-Tooltip--targetAattachedLeft > & {
+    .bdl-Tooltip-target-attached-top.bdl-Tooltip-target-attached-left > & {
         margin-bottom: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -108,7 +108,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedTop.bdl-Tooltip--targetAattachedRight > & {
+    .bdl-Tooltip-target-attached-top.bdl-Tooltip-target-attached-right > & {
         margin-bottom: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -124,7 +124,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedMiddle.bdl-Tooltip--targetAattachedRight > & {
+    .bdl-Tooltip-target-attached-middle.bdl-Tooltip-target-attached-right > & {
         margin-left: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -142,7 +142,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedMiddle.bdl-Tooltip--targetAattachedLeft > & {
+    .bdl-Tooltip-target-attached-middle.bdl-Tooltip-target-attached-left > & {
         margin-right: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -160,7 +160,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedBottom.bdl-Tooltip--targetAattachedCenter > & {
+    .bdl-Tooltip-target-attached-bottom.bdl-Tooltip-target-attached-center > & {
         margin-top: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -178,7 +178,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedBottom.bdl-Tooltip--targetAattachedLeft > & {
+    .bdl-Tooltip-target-attached-bottom.bdl-Tooltip-target-attached-left > & {
         margin-top: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -194,7 +194,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .bdl-Tooltip--targetAattachedBottom.bdl-Tooltip--targetAattachedRight > & {
+    .bdl-Tooltip-target-attached-bottom.bdl-Tooltip-target-attached-right > & {
         margin-top: $arrow-size + $tooltip-offset;
 
         &::before {

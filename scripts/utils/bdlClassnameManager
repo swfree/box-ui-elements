@@ -16,23 +16,20 @@ const writeFile = promisify(fs.writeFile);
 
     HOW TO RUN:
     cd src/
+    // .scss
     find . -name "*.scss" -exec ../scripts/utils/bdlClassnameManager swap {} \;
-    // OLD find . -name "*.js" -exec ../scripts/utils/bdlClassnameManager swap {} \;
+    // .js
     find . -not -name "*test.js" -and -name "*.js" -exec ../scripts/utils/bdlClassnameManager swap {} \;
+    // -test.js
     find . -name "*test.js" -exec ../scripts/utils/bdlClassnameManager swap {} '' --tests \;
-    // ^^ needs to be '. for test.js ; . doesnt work on its own
-
-    find . -name "*test.js" -exec ../../../scripts/utils/bdlClassnameManager swap {} '' --tests \;
 */
 
 /*
     TODO:
     * What to do with span?
-    * test.js files, esp. 'label'
-    * should run *.js WITHOUT test.js
-    * should run *-test.js WITH '. prefix instead of ' prefix
+    * should run *-test.js with '. prefix instead of ' prefix
     * Tooltip.js uniqueId
-    * UploadStateContent.js btn-primary *** ` backticks!!
+    * UploadStateContent.js btn-primary --> .js files also need ` backticks
 */
 
 const extendedConversionMap = {

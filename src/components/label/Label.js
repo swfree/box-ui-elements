@@ -40,7 +40,7 @@ const Label = ({ text, tooltip, infoTooltip, infoIconProps, showOptionalText, hi
         labelContent.push(
             <InfoIconWithTooltip
                 key="infoTooltip"
-                iconProps={{ className: 'tooltip-icon', ...infoIconProps }}
+                iconProps={{ className: 'bdl-Tooltip-icon', ...infoIconProps }}
                 tooltipText={infoTooltip}
             />,
         );

@@ -8,7 +8,7 @@ $arrow-size: 6px;
 $horizontal-offset: 10px;
 $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
 
-.tooltip {
+.bdl-Tooltip {
     background-color: $bdl-gray-80;
     border-color: $bdl-gray-80;
     border-radius: 4px;
@@ -41,7 +41,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         border: 1px solid $bdl-watermelon-red;
         color: $bdl-watermelon-red;
 
-        .tooltip-close-button .icon-close .fill-color {
+        .bdl-Tooltip-closeButton .icon-close .fill-color {
             fill: $bdl-watermelon-red;
         }
     }
@@ -59,7 +59,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         padding-right: 24px;
     }
 
-    .tooltip-close-button {
+    .bdl-Tooltip-closeButton {
         cursor: pointer;
         position: absolute;
         right: 0;
@@ -74,7 +74,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-top.tooltip-target-attached-center > & {
+    .bdl-Tooltip--targetAattachedTop.bdl-Tooltip--targetAattachedCenter > & {
         margin-bottom: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -92,7 +92,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-top.tooltip-target-attached-left > & {
+    .bdl-Tooltip--targetAattachedTop.bdl-Tooltip--targetAattachedLeft > & {
         margin-bottom: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -108,7 +108,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-top.tooltip-target-attached-right > & {
+    .bdl-Tooltip--targetAattachedTop.bdl-Tooltip--targetAattachedRight > & {
         margin-bottom: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -124,7 +124,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-middle.tooltip-target-attached-right > & {
+    .bdl-Tooltip--targetAattachedMiddle.bdl-Tooltip--targetAattachedRight > & {
         margin-left: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -142,7 +142,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-middle.tooltip-target-attached-left > & {
+    .bdl-Tooltip--targetAattachedMiddle.bdl-Tooltip--targetAattachedLeft > & {
         margin-right: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -160,7 +160,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-bottom.tooltip-target-attached-center > & {
+    .bdl-Tooltip--targetAattachedBottom.bdl-Tooltip--targetAattachedCenter > & {
         margin-top: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -178,7 +178,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-bottom.tooltip-target-attached-left > & {
+    .bdl-Tooltip--targetAattachedBottom.bdl-Tooltip--targetAattachedLeft > & {
         margin-top: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -194,7 +194,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
         }
     }
 
-    .tooltip-target-attached-bottom.tooltip-target-attached-right > & {
+    .bdl-Tooltip--targetAattachedBottom.bdl-Tooltip--targetAattachedRight > & {
         margin-top: $arrow-size + $tooltip-offset;
 
         &::before {
@@ -214,7 +214,7 @@ $tooltip-offset: 4px; /* amount of space between target and tooltip arrow */
 // tooltip is a tethered element and as such attached to body
 // however the body may not have box specific classes and hence the
 // tooltip needs to manually inherit few of the body styles to look correct.
-.tooltip-element {
+.bdl-Tooltip-element {
     @include box-sizing;
     @include common-typography;
 

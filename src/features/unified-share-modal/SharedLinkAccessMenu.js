@@ -81,7 +81,7 @@ class SharedLinkAccessMenu extends React.Component<Props> {
                     if (menuItem && isDisabledByClassification) {
                         return (
                             <Tooltip
-                                key={`tooltip-${level}`}
+                                key={`bdl-Tooltip-${level}`}
                                 position="top-center"
                                 text={
                                     <FormattedMessage

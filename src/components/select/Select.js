@@ -61,7 +61,7 @@ const Select = ({
                         </span>
                         {infoTooltip && (
                             <Tooltip position="middle-right" text={infoTooltip}>
-                                <span className="tooltip-icon-container">
+                                <span className="bdl-Tooltip-iconContainer">
                                     <IconInfo height={16} width={16} {...infoIconProps} />
                                 </span>
                             </Tooltip>

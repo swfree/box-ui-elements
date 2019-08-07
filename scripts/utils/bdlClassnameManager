@@ -40,6 +40,8 @@ const extendedConversionMap = {
     'tooltip-target-attached-center': 'bdl-Tooltip--targetAattachedCenter',
     'tooltip-target-attached-left': 'bdl-Tooltip--targetAattachedLeft',
     'tooltip-target-attached-right': 'bdl-Tooltip--targetAattachedRight',
+    'tooltip-target-attached-middle': 'bdl-Tooltip--targetAattachedMiddle',
+    'tooltip-target-attached-bottom': 'bdl-Tooltip--targetAattachedBottom',
     /*
         OTHER
         'btn-primary': 'bdl-Button--primary',
@@ -158,7 +160,7 @@ async function processFile(conversionMap) {
                     } else if (fileType === 'js') {
                         const quotationType = /"/.test(match)
                             ? '"'
-                            : /"/.test(match)
+                            : /'/.test(match)
                                 ? '\''
                                 : '`';
                         replacementFile = replacementFile.replace(new RegExp(match, 'g'), `${quotationType}${conversionMap[kebabCase(match)]}`);

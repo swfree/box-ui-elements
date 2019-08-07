@@ -6,7 +6,7 @@ exports[`components/text-area/TextArea should not show optional text when hideOp
 >
   <Label
     showOptionalText={false}
-    text="label"
+    text="bdl-Label"
   >
     <Tooltip
       constrainToScrollParent={false}
@@ -35,7 +35,7 @@ exports[`components/text-area/TextArea should show optional text when hideOption
 >
   <Label
     showOptionalText={true}
-    text="label"
+    text="bdl-Label"
   >
     <Tooltip
       constrainToScrollParent={false}

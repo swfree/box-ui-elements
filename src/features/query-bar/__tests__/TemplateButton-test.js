@@ -28,7 +28,7 @@ describe('feature/query-bar/components/TemplateButton', () => {
         });
     });
 
-    describe('bdl-ToggleTemplateDropdownButton()', () => {
+    describe('toggleTemplateDropdownButton()', () => {
         [
             {
                 description: 'Should open the dropdown',

@@ -2,7 +2,7 @@
 
 exports[`components/pill-selector-dropdown/PillSelectorDropdown render() should render disabled pill selector 1`] = `
 <SelectorDropdown
-  className="pill-selector-wrapper"
+  className="bdl-PillSelector-wrapper"
   onEnter={[Function]}
   onSelect={[Function]}
   selector={

@@ -23,9 +23,9 @@ describe('components/checkbox/Checkbox', () => {
                 .at(0)
                 .prop('className'),
         ).toEqual('checkbox-pointer-target');
-        expect(wrapper.find('bdl-Label').text()).toEqual('Check things');
+        expect(wrapper.find('label').text()).toEqual('Check things');
         expect(wrapper.find('input').prop('checked')).toBeFalsy();
-        expect(wrapper.find('.label').length).toBe(0);
+        expect(wrapper.find('.bdl-Label').length).toBe(0);
     });
 
     test('should pass rest of props to input', () => {
@@ -42,8 +42,8 @@ describe('components/checkbox/Checkbox', () => {
 
         const tooltipIcon = wrapper.find('CheckboxTooltip');
         expect(tooltipIcon.length).toBeTruthy();
-        expect(tooltipIcon.prop('bdl-Label').type).toEqual('bdl-Label');
-        expect(tooltipIcon.prop('bdl-Tooltip')).toEqual(tooltip);
+        expect(tooltipIcon.prop('label').type).toEqual('label');
+        expect(tooltipIcon.prop('tooltip')).toEqual(tooltip);
     });
 
     test('should render subsection when passed through props', () => {
@@ -79,7 +79,7 @@ describe('components/checkbox/Checkbox', () => {
         const fieldLabel = 'Label';
         wrapper.setProps({ fieldLabel });
 
-        const label = wrapper.find('.label');
+        const label = wrapper.find('.bdl-Label');
         expect(label.length).toBe(1);
         expect(label.contains(fieldLabel)).toBe(true);
     });

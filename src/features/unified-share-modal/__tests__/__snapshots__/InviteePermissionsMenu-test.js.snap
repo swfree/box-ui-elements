@@ -23,10 +23,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
-          className="lnk is-disabled"
+          className="lnk bdl-is-disabled"
           disabled={true}
         >
           <MenuToggle>
@@ -255,10 +255,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
-          className="lnk is-disabled"
+          className="lnk bdl-is-disabled"
           disabled={true}
         >
           <MenuToggle>
@@ -487,10 +487,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
-          className="lnk is-disabled"
+          className="lnk bdl-is-disabled"
           disabled={true}
         >
           <MenuToggle>
@@ -719,10 +719,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
-          className="lnk is-disabled"
+          className="lnk bdl-is-disabled"
           disabled={true}
         >
           <MenuToggle>
@@ -951,10 +951,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
-          className="lnk is-disabled"
+          className="lnk bdl-is-disabled"
           disabled={true}
         >
           <MenuToggle>
@@ -1183,10 +1183,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
-          className="lnk is-disabled"
+          className="lnk bdl-is-disabled"
           disabled={true}
         >
           <MenuToggle>
@@ -1522,10 +1522,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() it should 
       theme="default"
     >
       <div
-        className="tooltip-target"
+        className="bdl-Tooltip-target"
       >
         <PlainButton
-          className="lnk is-disabled"
+          className="lnk bdl-is-disabled"
           disabled={true}
         >
           <MenuToggle>
@@ -1639,10 +1639,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() should ren
   theme="default"
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <PlainButton
-      className="lnk is-disabled"
+      className="lnk bdl-is-disabled"
       disabled={true}
     >
       <MenuToggle>
@@ -1672,10 +1672,10 @@ exports[`features/unified-share-modal/InviteePermissionsMenu render() should ren
   theme="default"
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <PlainButton
-      className="lnk is-disabled"
+      className="lnk bdl-is-disabled"
       disabled={true}
     >
       <MenuToggle>

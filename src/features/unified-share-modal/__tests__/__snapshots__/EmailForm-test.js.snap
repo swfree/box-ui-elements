@@ -6,7 +6,7 @@ exports[`features/unified-share-modal/EmailForm render() should not show inline 
   onSubmit={[Function]}
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"
@@ -51,7 +51,7 @@ exports[`features/unified-share-modal/EmailForm render() should not show inline 
   onSubmit={[Function]}
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"
@@ -101,7 +101,7 @@ exports[`features/unified-share-modal/EmailForm render() should render default c
     maxDisplayedUserAvatars={3}
   />
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"
@@ -154,7 +154,7 @@ exports[`features/unified-share-modal/EmailForm render() should render default c
     theme="default"
   >
     <div
-      className="tooltip-target"
+      className="bdl-Tooltip-target"
     >
       <Tooltip
         className="usm-ftux-tooltip"
@@ -233,7 +233,7 @@ exports[`features/unified-share-modal/EmailForm render() should render default c
   onSubmit={[Function]}
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"
@@ -311,7 +311,7 @@ exports[`features/unified-share-modal/EmailForm render() should render default c
   onSubmit={[Function]}
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"
@@ -361,7 +361,7 @@ exports[`features/unified-share-modal/EmailForm render() should render default c
     Error submitting form
   </InlineNotice>
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"
@@ -444,7 +444,7 @@ exports[`features/unified-share-modal/EmailForm render() should render default c
     Oops, there was an error.
   </InlineNotice>
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"
@@ -522,7 +522,7 @@ exports[`features/unified-share-modal/EmailForm render() should render default c
   onSubmit={[Function]}
 >
   <div
-    className="tooltip-target"
+    className="bdl-Tooltip-target"
   >
     <Tooltip
       className="usm-ftux-tooltip"

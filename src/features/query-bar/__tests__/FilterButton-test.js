@@ -227,7 +227,7 @@ describe('feature/query-bar/components/filter/FilterButton', () => {
         });
     });
 
-    describe('bdl-ToggleButton()', () => {
+    describe('toggleButton()', () => {
         [
             {
                 description: 'Should update state with new ordering',

@@ -14,7 +14,7 @@ describe('components/label/HiddenLabel', () => {
         );
 
         expect(wrapper.find('LabelPrimitive').length).toEqual(1);
-        expect(wrapper.find('LabelPrimitive').prop('bdl-LabelContent')).toEqual(labelContent);
+        expect(wrapper.find('LabelPrimitive').prop('labelContent')).toEqual(labelContent);
     });
 
     test('should set the className on LabelPrimitive that hides the label text', () => {

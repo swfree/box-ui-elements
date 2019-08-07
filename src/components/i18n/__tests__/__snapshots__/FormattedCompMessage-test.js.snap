@@ -115,7 +115,7 @@ exports[`components/i18n components/i18n/FormattedCompMessage should correctly r
         to="foo"
       >
         <a
-          className="btn"
+          className="bdl-Button"
           href="foo"
         >
           link

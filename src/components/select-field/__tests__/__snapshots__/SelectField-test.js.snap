@@ -4,7 +4,7 @@ exports[`components/select-feild/SelectField should render properly for multi se
 <MultiSelectField
   error={null}
   label="Enter things"
-  name="toggle"
+  name="bdl-Toggle"
   onBlur="onblur"
   onChange={[Function]}
   selectedValues="value"
@@ -16,7 +16,7 @@ exports[`components/select-feild/SelectField should render properly for single s
 <SingleSelectField
   error={null}
   label="Enter things"
-  name="toggle"
+  name="bdl-Toggle"
   onBlur="onblur"
   onChange={[Function]}
   selectedValue="value"

@@ -183,6 +183,6 @@ describe('components/notification/Notification', () => {
         );
 
         expect(wrapper.find('span').text()).toEqual('test');
-        expect(wrapper.find('.btn').text()).toEqual('dostuff');
+        expect(wrapper.find('.bdl-Button').text()).toEqual('dostuff');
     });
 });

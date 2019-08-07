@@ -6,7 +6,7 @@ exports[`components/dropdown-menu/MenuToggle should correctly render toggle 1`] 
 >
   hi
   <IconCaretDown
-    className="toggle-arrow"
+    className="bdl-Toggle-arrow"
     width={7}
   />
 </span>

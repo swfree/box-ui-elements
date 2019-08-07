@@ -44,7 +44,7 @@ describe('components/text-input/TextInput', () => {
         const labelTooltip = 'This is a label.';
         const wrapper = mount(<TextInput label="bdl-Label" labelTooltip={labelTooltip} name="input" />);
 
-        expect(wrapper.find('Label').prop('bdl-Tooltip')).toEqual(labelTooltip);
+        expect(wrapper.find('Label').prop('tooltip')).toEqual(labelTooltip);
     });
 
     test('should hide optional label text when specified', () => {

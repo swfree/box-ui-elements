@@ -45,7 +45,7 @@ describe('components/select/Select', () => {
     test('should correctly render label tooltip when specified', () => {
         const wrapper = shallow(<Select label="Album" labelTooltip="This is my album." name="select" />);
 
-        expect(wrapper.find('Label').prop('bdl-Tooltip')).toEqual('This is my album.');
+        expect(wrapper.find('Label').prop('tooltip')).toEqual('This is my album.');
     });
 
     test('should correctly render custom attributes in select when specified', () => {

@@ -24,7 +24,7 @@ describe('features/content-explorer/item-list/ItemListButton', () => {
                 const wrapper = renderComponent();
 
                 expect(wrapper.find(buttonType).length).toBe(1);
-                expect(wrapper.prop('bdl-Label')).toBeTruthy();
+                expect(wrapper.prop('label')).toBeTruthy();
                 expect(wrapper.prop('value')).toEqual('123');
             });
 

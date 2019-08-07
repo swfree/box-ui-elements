@@ -91,7 +91,7 @@ exports[`features/collaborator-avatars/CollaboratorList render() should render d
   </ul>
   <ModalActions>
     <Button
-      className="btn-done"
+      className="bdl-Button--done"
     >
       <FormattedMessage
         defaultMessage="Done"
@@ -194,7 +194,7 @@ exports[`features/collaborator-avatars/CollaboratorList render() should render e
   </ul>
   <ModalActions>
     <Button
-      className="btn-done"
+      className="bdl-Button--done"
     >
       <FormattedMessage
         defaultMessage="Done"

@@ -121,8 +121,8 @@ describe('features/invite-collaborators-modal/InviteCollaboratorsModal', () => {
 
             wrapper.instance().closeModal();
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual('');
-            expect(wrapper.state('bdl-PillSelectorInputValue')).toEqual('');
+            expect(wrapper.state('pillSelectorError')).toEqual('');
+            expect(wrapper.state('pillSelectorInputValue')).toEqual('');
             expect(wrapper.state('selectedOptions').length).toBe(0);
         });
     });
@@ -153,7 +153,7 @@ describe('features/invite-collaborators-modal/InviteCollaboratorsModal', () => {
 
             wrapper.instance().sendInvites();
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual(error);
+            expect(wrapper.state('pillSelectorError')).toEqual(error);
         });
 
         test('should send invites with the correct params', () => {
@@ -275,8 +275,8 @@ describe('features/invite-collaborators-modal/InviteCollaboratorsModal', () => {
 
             wrapper.instance().handlePillSelectorInput('j');
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual('');
-            expect(wrapper.state('bdl-PillSelectorInputValue')).toEqual('j');
+            expect(wrapper.state('pillSelectorError')).toEqual('');
+            expect(wrapper.state('pillSelectorInputValue')).toEqual('j');
         });
     });
 
@@ -379,7 +379,7 @@ describe('features/invite-collaborators-modal/InviteCollaboratorsModal', () => {
 
             wrapper.instance().validateForError('invalidEmail@box');
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual(error);
+            expect(wrapper.state('pillSelectorError')).toEqual(error);
         });
 
         test('should not set an error if text is a valid email', () => {
@@ -393,7 +393,7 @@ describe('features/invite-collaborators-modal/InviteCollaboratorsModal', () => {
 
             wrapper.instance().validateForError('validEmail@example.com');
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual('');
+            expect(wrapper.state('pillSelectorError')).toEqual('');
         });
     });
 

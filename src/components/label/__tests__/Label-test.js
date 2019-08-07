@@ -23,7 +23,7 @@ describe('components/label/Label', () => {
 
         expect(wrapper.find('StandardLabel').length).toEqual(1);
         expect(wrapper.find('HiddenLabel').length).toEqual(0);
-        expect(wrapper.find('StandardLabel').prop('bdl-LabelContent')[0].props.children).toEqual(text);
+        expect(wrapper.find('StandardLabel').prop('labelContent')[0].props.children).toEqual(text);
     });
 
     test('should render the hidden label when hideLabel is set', () => {
@@ -35,7 +35,7 @@ describe('components/label/Label', () => {
 
         expect(wrapper.find('HiddenLabel').length).toEqual(1);
         expect(wrapper.find('StandardLabel').length).toEqual(0);
-        expect(wrapper.find('HiddenLabel').prop('bdl-LabelContent')[0].props.children).toEqual(text);
+        expect(wrapper.find('HiddenLabel').prop('labelContent')[0].props.children).toEqual(text);
     });
 
     test('should correctly render optional text when specified', () => {
@@ -45,10 +45,10 @@ describe('components/label/Label', () => {
             </Label>,
         );
 
-        expect(wrapper.find('.label-optional').length).toEqual(1);
+        expect(wrapper.find('.bdl-Label--optional').length).toEqual(1);
 
         // Make sure text 'optional' appears in parentheses like '(optional)'
-        expect(/.*\(.*\).*/.test(wrapper.find('.label-optional').html())).toEqual(true);
+        expect(/.*\(.*\).*/.test(wrapper.find('.bdl-Label--optional').html())).toEqual(true);
     });
 
     describe('with infoToolTip', () => {
@@ -63,7 +63,7 @@ describe('components/label/Label', () => {
 
         test('should get the tooltip text', () => {
             const wrapper = getMountedWrapper({ infoTooltip: 'Test tooltip' });
-            expect(wrapper.find(InfoIconWithTooltip).prop('bdl-TooltipText')).toEqual('Test tooltip');
+            expect(wrapper.find(InfoIconWithTooltip).prop('tooltipText')).toEqual('Test tooltip');
         });
     });
 });

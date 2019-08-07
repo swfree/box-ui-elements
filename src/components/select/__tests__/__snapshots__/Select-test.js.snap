@@ -6,7 +6,7 @@ exports[`components/select/Select should not show Tooltip when no error exists 1
 >
   <Label
     hideLabel={false}
-    text="label"
+    text="bdl-Label"
   >
     <Tooltip
       constrainToScrollParent={false}
@@ -40,7 +40,7 @@ exports[`components/select/Select should not show error outline if not specified
 >
   <Label
     hideLabel={false}
-    text="label"
+    text="bdl-Label"
   >
     <Tooltip
       constrainToScrollParent={false}
@@ -107,7 +107,7 @@ exports[`components/select/Select should render infoTooltip when specified 1`] =
           theme="default"
         >
           <span
-            className="tooltip-icon-container"
+            className="bdl-Tooltip-iconContainer"
           >
             <IconInfo
               height={16}
@@ -128,7 +128,7 @@ exports[`components/select/Select should show Tooltip when error exists 1`] = `
 >
   <Label
     hideLabel={false}
-    text="label"
+    text="bdl-Label"
   >
     <Tooltip
       constrainToScrollParent={false}
@@ -162,7 +162,7 @@ exports[`components/select/Select should show error outline if specified 1`] = `
 >
   <Label
     hideLabel={false}
-    text="label"
+    text="bdl-Label"
   >
     <Tooltip
       constrainToScrollParent={false}

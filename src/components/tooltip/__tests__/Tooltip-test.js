@@ -128,7 +128,7 @@ describe('components/tooltip/Tooltip', () => {
                 </Tooltip>,
             );
 
-            expect(wrapper.find('[role="bdl-Tooltip"]').hasClass('testing')).toBe(true);
+            expect(wrapper.find('[role="tooltip"]').hasClass('testing')).toBe(true);
         });
 
         test('should constrain to scroll parent when specified', () => {
@@ -212,7 +212,7 @@ describe('components/tooltip/Tooltip', () => {
                 </Tooltip>,
             );
 
-            expect(wrapper.find('[role="bdl-Tooltip"]').hasClass('is-error')).toBe(true);
+            expect(wrapper.find('[role="tooltip"]').hasClass('is-error')).toBe(true);
         });
 
         test('should render children only when tooltip is disabled', () => {

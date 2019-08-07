@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`feature/left-sidebar/LeftSidebarLink bdl-Tooltip should take class from state 1`] = `
+<Tooltip
+  className="nav-link-tooltip is-visible"
+  constrainToScrollParent={false}
+  constrainToWindow={true}
+  isDisabled={false}
+  isTabbable={false}
+  position="middle-right"
+  text="Feed"
+  theme="default"
+>
+  <LinkBase
+    className=""
+    style={Object {}}
+  >
+    <span
+      className="left-sidebar-link-text"
+    >
+      Feed
+    </span>
+  </LinkBase>
+</Tooltip>
+`;
+
 exports[`feature/left-sidebar/LeftSidebarLink should render BadgeCountElement 1`] = `
 <Tooltip
   className="nav-link-tooltip"
@@ -279,30 +303,6 @@ exports[`feature/left-sidebar/LeftSidebarLink should use custom theme based on s
 exports[`feature/left-sidebar/LeftSidebarLink should use custom theme based on selected link and theme 4`] = `
 <Tooltip
   className="nav-link-tooltip"
-  constrainToScrollParent={false}
-  constrainToWindow={true}
-  isDisabled={false}
-  isTabbable={false}
-  position="middle-right"
-  text="Feed"
-  theme="default"
->
-  <LinkBase
-    className=""
-    style={Object {}}
-  >
-    <span
-      className="left-sidebar-link-text"
-    >
-      Feed
-    </span>
-  </LinkBase>
-</Tooltip>
-`;
-
-exports[`feature/left-sidebar/LeftSidebarLink tooltip should take class from state 1`] = `
-<Tooltip
-  className="nav-link-tooltip is-visible"
   constrainToScrollParent={false}
   constrainToWindow={true}
   isDisabled={false}

@@ -98,8 +98,8 @@ describe('features/shared-link-modal/EmailSharedLink', () => {
 
             wrapper.instance().handlePillSelectorInput('j');
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual('');
-            expect(wrapper.state('bdl-PillSelectorInputValue')).toEqual('j');
+            expect(wrapper.state('pillSelectorError')).toEqual('');
+            expect(wrapper.state('pillSelectorInputValue')).toEqual('j');
         });
     });
 
@@ -202,7 +202,7 @@ describe('features/shared-link-modal/EmailSharedLink', () => {
 
             wrapper.instance().validateForError('invalidEmail@box');
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual(error);
+            expect(wrapper.state('pillSelectorError')).toEqual(error);
         });
 
         test('should not set an error if text is a valid email', () => {
@@ -216,7 +216,7 @@ describe('features/shared-link-modal/EmailSharedLink', () => {
 
             wrapper.instance().validateForError('validEmail@example.com');
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual('');
+            expect(wrapper.state('pillSelectorError')).toEqual('');
         });
     });
 
@@ -284,7 +284,7 @@ describe('features/shared-link-modal/EmailSharedLink', () => {
 
             wrapper.instance().sendEmail({ preventDefault: sandbox.stub() });
 
-            expect(wrapper.state('bdl-PillSelectorError')).toEqual('error');
+            expect(wrapper.state('pillSelectorError')).toEqual('error');
         });
     });
 

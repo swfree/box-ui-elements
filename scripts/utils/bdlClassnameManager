@@ -17,15 +17,22 @@ const writeFile = promisify(fs.writeFile);
     HOW TO RUN:
     cd src/
     find . -name "*.scss" -exec ../scripts/utils/bdlClassnameManager swap {} \;
-    find . -name "*.js" -exec ../scripts/utils/bdlClassnameManager swap {} \;
+    // OLD find . -name "*.js" -exec ../scripts/utils/bdlClassnameManager swap {} \;
+    find . -not -name "*test.js" -and -name "*.js" -exec ../scripts/utils/bdlClassnameManager swap {} \;
+    find . -name "*test.js" -exec ../scripts/utils/bdlClassnameManager swap {} '' --tests \;
+    // ^^ needs to be '. for test.js ; . doesnt work on its own
+
+    find . -name "*test.js" -exec ../../../scripts/utils/bdlClassnameManager swap {} '' --tests \;
 */
 
 /*
     TODO:
     * What to do with span?
     * test.js files, esp. 'label'
+    * should run *.js WITHOUT test.js
+    * should run *-test.js WITH '. prefix instead of ' prefix
     * Tooltip.js uniqueId
-    * UploadStateContent.js btn-primary
+    * UploadStateContent.js btn-primary *** ` backticks!!
 */
 
 const extendedConversionMap = {
@@ -73,7 +80,7 @@ const baseConversionMap = {
 };
 
 function printHelp() {
-    console.log(`Usage: ${process.argv[1].split('/').pop()} operation fileName [--verbose]`);
+    console.log(`Usage: ${process.argv[1].split('/').pop()} operation fileName [--verbose] [--tests]`);
     console.log('\nSupported operations:');
     console.log('\tcheck\t\tcheck to see if a file contains deprecated values (returns error if it does)');
     console.log('\tswap\t\treplace known-deprecated variable names in a JS or SCSS file');
@@ -93,9 +100,10 @@ async function processFile(conversionMap) {
     }
     const fileType = fileName.split('.').pop();
     const verboseMode = process.argv[4] === '--verbose';
+    const testMode = process.argv[5] === '--tests';
 
     let reBadName;
-    if (fileType === 'scss') {
+    if (fileType === 'scss' || (fileType === 'js' && testMode)) {
         // only make changes in .scss files for classnames prefixed with '.'
         const converter = entry => `\\.${entry}`;
         reBadName = new RegExp(Object.keys(conversionMap).map(converter).join('|'), 'g');
@@ -139,7 +147,7 @@ async function processFile(conversionMap) {
                 }
 
                 matches.forEach(match => {
-                    if (fileType === 'scss') {
+                    if (fileType === 'scss' || (fileType === 'js' && testMode)) {
                         replacementFile = replacementFile.replace(new RegExp(`\\${match}`, 'g'), `.${conversionMap[kebabCase(match)]}`);
                     } else if (fileType === 'js') {
                         const quotationType = /"/.test(match) ? '"' : '\'';

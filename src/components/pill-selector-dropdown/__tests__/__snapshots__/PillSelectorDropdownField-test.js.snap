@@ -90,10 +90,10 @@ exports[`components/pill-selector-dropdown/PillSelectorDropdownField should rend
   allowCustomPills={true}
   allowInvalidPills={true}
   disabled={false}
-  error="error"
+  error={null}
   inputProps={
     Object {
-      "name": "pill",
+      "name": "bdl-Pill",
     }
   }
   label=""

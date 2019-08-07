@@ -14,7 +14,7 @@ describe('components/checkbox/CheckboxTooltip', () => {
 
     test('should correctly render default component', () => {
         expect(wrapper.find('.checkbox-tooltip-wrapper').length).toBeTruthy();
-        expect(wrapper.find('bdl-Label').length).toBeTruthy();
+        expect(wrapper.find('label').length).toBeTruthy();
         expect(tooltip.length).toBeTruthy();
     });
 });

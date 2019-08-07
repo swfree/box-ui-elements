@@ -234,7 +234,7 @@ describe('features/unified-share-modal/ContactsField', () => {
 
             wrapper.instance().handlePillSelectorInput('a');
 
-            expect(wrapper.state('bdl-PillSelectorInputValue')).toEqual('a');
+            expect(wrapper.state('pillSelectorInputValue')).toEqual('a');
             expect(onInput).toHaveBeenCalled();
         });
 

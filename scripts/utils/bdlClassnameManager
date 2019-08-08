@@ -10,6 +10,7 @@ const identity = require('lodash/identity');
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
+
 /*
     The BDL classname manager is a tool to help identify and correct the usage of classnames
     names across box-ui-elements, and other projects.
@@ -28,7 +29,12 @@ const writeFile = promisify(fs.writeFile);
     TODO:
     * What to do with span?
     * should run *-test.js with '. prefix instead of ' prefix
+    * Manual changes to note:
     * Tooltip.js uniqueId
+    * Classification.js const STYLE_TOOLTIP
+    * SharedLinkAccessMenu.js key=
+    * UnifiedShareModalTitle messageStyle="tooltip"
+    * one missed manual change: tooltip-icon-container
 */
 
 const extendedConversionMap = {
@@ -77,6 +83,9 @@ const baseConversionMap = {
     // 'toggle': 'bdl-Toggle',
 };
 
+const scssPrefix = '.';
+const jsPrefixes = ['\'', '"', '`'];
+
 function printHelp() {
     console.log(`Usage: ${process.argv[1].split('/').pop()} operation fileName [--verbose] [--tests]`);
     console.log('\nSupported operations:');
@@ -102,23 +111,15 @@ async function processFile(conversionMap) {
 
     let reBadName;
     if (fileType === 'scss' || (fileType === 'js' && testMode)) {
-        // only make changes in .scss files for classnames prefixed with '.'
-        const converter = entry => `\\.${entry}`;
+        // Only make changes in .scss files for classnames prefixed with '.'
+        const converter = entry => `\\${scssPrefix}${entry}`;
         reBadName = new RegExp(Object.keys(conversionMap).map(converter).join('|'), 'g');
     } else if (fileType === 'js') {
-        // only make changes in .js files for classnames prefixed with " or ' or `
-        const doubleQuoteConverter = entry => `"${entry}`;
-        const singleQuoteConverter = entry => `'${entry}`;
-        const backtickConverter = entry => `\`${entry}`;
-        reBadName = new RegExp(
-            Object.keys(conversionMap).map(doubleQuoteConverter).join('|')
-                .concat('|')
-                .concat(Object.keys(conversionMap).map(singleQuoteConverter).join('|'))
-                .concat('|')
-                .concat(Object.keys(conversionMap).map(backtickConverter).join('|')),
-            'g',
-        );
-
+        // The majority of .js classnames are surrounded by quotation marks
+        // Restrict swapping to those to avoid overrwriting variable names
+        const converter = entry => jsPrefixes.map(prefix => `${prefix}${entry}`).join('|');
+        // const converter = entry => `"${entry}|'${entry}|\`${entry}`;
+        reBadName = new RegExp(Object.keys(conversionMap).map(converter).join('|'), 'g');
     }
 
     try {
@@ -149,14 +150,14 @@ async function processFile(conversionMap) {
 
                 matches.forEach(match => {
                     if (fileType === 'scss' || (fileType === 'js' && testMode)) {
-                        replacementFile = replacementFile.replace(new RegExp(`\\${match}`, 'g'), `.${conversionMap[kebabCase(match)]}`);
+                        replacementFile = replacementFile.replace(new RegExp(`\\${match}`, 'g'), `${scssPrefix}${conversionMap[kebabCase(match)]}`);
                     } else if (fileType === 'js') {
-                        const quotationType = /"/.test(match)
-                            ? '"'
-                            : /'/.test(match)
-                                ? '\''
-                                : '`';
-                        replacementFile = replacementFile.replace(new RegExp(match, 'g'), `${quotationType}${conversionMap[kebabCase(match)]}`);
+                        const quotationMark = match[0];
+                        if (jsPrefixes.includes(quotationMark)) {
+                            replacementFile = replacementFile.replace(new RegExp(match, 'g'), `${quotationMark}${conversionMap[kebabCase(match)]}`);
+                        } else if (verboseMode) {
+                            console.warn(colors.yellow('Incorrect match for js files. skipping', fileName, '...'));
+                        }
                     } else {
                         console.error(colors.yellow('Unrecognized file type for conversion. skipping', fileName, '...'));
                         process.exit(0);
@@ -166,7 +167,7 @@ async function processFile(conversionMap) {
                 try {
                     if (matches.length > 0) {
                         await writeFile(fileName, replacementFile);
-                        console.log (colors.cyan(`Replaced ${matches.length} classname value${matches.length !== 1 ? 's': ''} in:\t`), fileName);
+                        console.log(colors.cyan(`Replaced ${matches.length} classname value${matches.length !== 1 ? 's': ''} in:\t`), fileName);
                     } else if (verboseMode) {
                         console.warn(colors.yellow('No changes needed to file:\t'), fileName);
                     }

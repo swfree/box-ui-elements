@@ -5,19 +5,19 @@ exports[`components/pill-cloud/PillCloud should render pills 1`] = `
   className="pill-cloud-container"
 >
   <Button
-    className="pill pill-cloud-button"
+    className="pill bdl-Pill pill-cloud-button"
     key="1"
   >
     Hello
   </Button>
   <Button
-    className="pill pill-cloud-button"
+    className="pill bdl-Pill pill-cloud-button"
     key="2"
   >
     There
   </Button>
   <Button
-    className="pill pill-cloud-button"
+    className="pill bdl-Pill pill-cloud-button"
     key="3"
   >
     Sir

@@ -243,7 +243,7 @@ class Tooltip extends React.Component<Props, State> {
 
         const bodyEl = bodyElement instanceof HTMLElement ? bodyElement : document.body;
 
-        const classes = classNames('tooltip', className, {
+        const classes = classNames('tooltip bdl-Tooltip', className, {
             'is-callout': theme === CALLOUT_THEME,
             'is-error': theme === ERROR_THEME,
             'with-close-button': withCloseButton,

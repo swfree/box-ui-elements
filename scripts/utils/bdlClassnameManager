@@ -148,7 +148,7 @@ async function main() {
                             }
                         }
                     });
-            
+
                 handleWriteFile(matches, fileName, fileToParse, verboseMode);
 
                 break;
@@ -161,7 +161,7 @@ async function main() {
                 }
 
                 matches
-                    .sort(lengthSorter) // sort prevents root classnames ('btn') from preemptively changing longer classnames ('btn-primary')
+                    .sort(lengthSorter)
                     .forEach((match) => {
                         if (fileType === 'scss') {
                             const matchReplace = match.replace('.', '');
@@ -171,9 +171,9 @@ async function main() {
                             process.exit(0);
                         }
                     });
-            
+
                 handleWriteFile(matches, fileName, fileToParse, verboseMode);
-    
+
                 break;
             }
             case 'swap': {
@@ -184,7 +184,7 @@ async function main() {
                 }
 
                 matches
-                    .sort(lengthSorter) // sort prevents root classnames ('btn') from preemptively changing longer classnames ('btn-primary')
+                    .sort(lengthSorter)
                     .forEach((match) => {
                         if (fileType === 'scss') {
                             fileToParse = fileToParse.replace(new RegExp(`\\${match}(?!-)`, 'g'), `${scssPrefix}${currentConversionMap[kebabCase(match)]}`);
@@ -197,7 +197,7 @@ async function main() {
                             }
                         }
                     });
-            
+
                 handleWriteFile(matches, fileName, fileToParse, verboseMode);
 
                 break;

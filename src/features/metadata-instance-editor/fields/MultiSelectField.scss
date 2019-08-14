@@ -11,7 +11,7 @@
         display: block;
         margin-top: 5px;
 
-        .select-button {
+        .bdl-SelectButton {
             z-index: inherit;
         }
     }
@@ -20,4 +20,8 @@
         color: $bdl-gray-62;
         word-wrap: break-word;
     }
+}
+
+.select-button {
+    @extend .bdl-SelectButton;
 }

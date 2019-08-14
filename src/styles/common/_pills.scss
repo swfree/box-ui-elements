@@ -4,8 +4,8 @@
 
 $pillTextColorDark: lighten($black, 31%);
 
-.pill,
-.btn.pill {
+.bdl-Pill,
+.btn.bdl-Pill {
     align-items: center;
     background-color: $primary-color;
     border-radius: 3px;
@@ -66,7 +66,7 @@ $pillTextColorDark: lighten($black, 31%);
     }
 }
 
-.pill-error {
+.bdl-Pill--error {
     background-color: $bdl-watermelon-red-10;
     border: 1px solid $bdl-watermelon-red-50;
     color: $bdl-watermelon-red;
@@ -76,7 +76,7 @@ $pillTextColorDark: lighten($black, 31%);
     }
 }
 
-.pill.pill-cloud-button {
+.bdl-Pill.pill-cloud-button {
     background-color: $white;
     border: 1px solid $primary-color;
     color: $primary-color;
@@ -99,4 +99,12 @@ $pillTextColorDark: lighten($black, 31%);
     border: 1px solid $bdl-gray-10;
     overflow-y: scroll;
     padding: 8px;
+}
+
+.pill-error {
+    @extend .bdl-Pill--error;
+}
+
+.pill {
+    @extend .bdl-Pill;
 }

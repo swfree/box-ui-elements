@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Pill = ({ isDisabled = false, isSelected = false, isValid = true, onRemove, text }: Props) => {
-    const styles = classNames('pill', {
+    const styles = classNames('pill bdl-Pill', {
         'is-selected': isSelected && !isDisabled,
         'is-invalid': !isValid,
         'is-disabled': isDisabled,

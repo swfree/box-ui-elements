@@ -67,7 +67,7 @@ class Sidebar extends React.Component<Props, State> {
 
     props: Props;
 
-    sidebarPanelsRef: { current: null | SidebarPanels } = React.createRef();
+    sidebarPanels: { current: null | SidebarPanels } = React.createRef();
 
     state: State;
 
@@ -169,7 +169,7 @@ class Sidebar extends React.Component<Props, State> {
      * @returns {void}
      */
     refresh(): void {
-        const { current: sidebarPanels } = this.sidebarPanelsRef;
+        const { current: sidebarPanels } = this.sidebarPanels;
 
         if (sidebarPanels) {
             sidebarPanels.refresh();
@@ -255,7 +255,7 @@ class Sidebar extends React.Component<Props, State> {
                             metadataSidebarProps={metadataSidebarProps}
                             onVersionChange={onVersionChange}
                             onVersionHistoryClick={onVersionHistoryClick}
-                            ref={this.sidebarPanelsRef}
+                            ref={this.sidebarPanels}
                             versionsSidebarProps={versionsSidebarProps}
                         />
                     </React.Fragment>
